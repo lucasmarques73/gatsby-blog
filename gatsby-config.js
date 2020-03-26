@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Lucas Marques`,
+    title: `Lucas Marques - Blog`,
     position: `Desenvolvedor Web`,
     description: `Blog para anotações sobre qualquer coisa que eu estiver estudando.`,
     author: `@lucas_marques`,
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
-    siteUrl: 'https://willianjusten.com.br'
+    siteUrl: 'https://lucasmarques.dev'
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
