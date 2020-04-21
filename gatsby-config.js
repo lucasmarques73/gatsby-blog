@@ -6,6 +6,7 @@ module.exports = {
     author: `@lucas_marques`,
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
     siteUrl: "https://lucasmarques.dev",
+    disqusShortName: "lucas-marques-dev",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
