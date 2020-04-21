@@ -1,3 +1,4 @@
+const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -18,4 +19,67 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: `/${pathWihtOutDate}`,
     })
   }
+}
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return graphql(`
+    {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
+          }
+        }
+      }
+    }
+  `).then(result => {
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/blog-post.js"),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+
+    const postsPerPage = 6
+    const numPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, index) => {
+      const currentPage = index + 1
+      const initialPath = "/posts"
+      const pagePath = `${initialPath}/page/${currentPage}`
+      const prevPagePath = `${initialPath}/page/${currentPage - 1}`
+      const nextPagePath = `${initialPath}/page/${currentPage + 1}`
+
+      createPage({
+        path: index === 0 ? initialPath : pagePath,
+        component: path.resolve("./src/templates/blog-list.js"),
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          numPages,
+          currentPage: currentPage,
+          isFirst: currentPage === 1,
+          isLast: currentPage === numPages,
+          prevPage: currentPage - 1 === 1 ? initialPath : prevPagePath,
+          nextPage: nextPagePath,
+        },
+      })
+    })
+  })
 }
