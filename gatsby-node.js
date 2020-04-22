@@ -58,6 +58,11 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      site {
+        siteMetadata {
+          postsPerPage
+        }
+      }
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
@@ -76,7 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // Create pagination to post list
-    const postsPerPage = 6
+    const postsPerPage = result.data.site.siteMetadata.postsPerPage
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, index) => {
