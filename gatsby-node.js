@@ -60,7 +60,10 @@ exports.createPages = ({ graphql, actions }) => {
       }
       site {
         siteMetadata {
-          postsPerPage
+          postsConfig {
+            postsPerPage
+            postsBasePath
+          }
         }
       }
     }
@@ -81,18 +84,21 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // Create pagination to post list
-    const postsPerPage = result.data.site.siteMetadata.postsPerPage
+    const postsBasePath =
+      result.data.site.siteMetadata.postsConfig.postsBasePath
+    const initialPath = postsBasePath === "/" ? "" : postsBasePath
+
+    const postsPerPage = result.data.site.siteMetadata.postsConfig.postsPerPage
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, index) => {
       const currentPage = index + 1
-      const initialPath = "/posts"
       const pagePath = `${initialPath}/page/${currentPage}`
       const prevPagePath = `${initialPath}/page/${currentPage - 1}`
       const nextPagePath = `${initialPath}/page/${currentPage + 1}`
 
       createPage({
-        path: index === 0 ? initialPath : pagePath,
+        path: index === 0 ? postsBasePath : pagePath,
         component: path.resolve("./src/templates/blog-list.js"),
         context: {
           limit: postsPerPage,

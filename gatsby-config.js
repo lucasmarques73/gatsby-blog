@@ -73,19 +73,23 @@ module.exports = {
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
     siteUrl: "https://lucasmarques.dev",
     disqusShortName: "lucas-marques-dev",
-    postsPerPage: 6,
+
+    postsConfig: {
+      postsPerPage: 6,
+      postsBasePath: "/",
+    },
     pages: [
       {
         label: "Home",
         url: "/",
       },
       {
-        label: "Posts",
-        url: "/posts/",
+        label: "Projetos",
+        url: "/projects",
       },
       {
         label: "Sobre Mim",
-        url: "/about/",
+        url: "/about",
       },
     ],
     socialLinks: [
