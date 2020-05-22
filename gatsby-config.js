@@ -68,7 +68,7 @@ const pluginsConfig = [
       // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
       fieldName: "personalApi",
       // Url to query from
-      url: "http://localhost:4000/",
+      url: "https://playground-graphql-lm.herokuapp.com/",
     },
   }
   // this (optional) plugin enables Progressive Web App + Offline functionality
