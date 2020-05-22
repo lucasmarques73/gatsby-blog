@@ -59,6 +59,18 @@ const pluginsConfig = [
       icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
     },
   },
+  // Simple config, passing URL
+  {
+    resolve: "gatsby-source-graphql",
+    options: {
+      // Arbitrary name for the remote schema Query type
+      typeName: "PERSONAL_API",
+      // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+      fieldName: "personalApi",
+      // Url to query from
+      url: "http://localhost:4000/",
+    },
+  }
   // this (optional) plugin enables Progressive Web App + Offline functionality
   // To learn more, visit: https://gatsby.dev/offline
   // `gatsby-plugin-offline`,
