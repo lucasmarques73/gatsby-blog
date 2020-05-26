@@ -19,12 +19,6 @@ const MenuBar = () => (
       </S.MenuBarLink>
     </S.MenuBarGroup>
     <S.MenuBarGroup>
-      <S.MenuBarItem title="Mudar o Tema">
-        <Icons.Light />
-      </S.MenuBarItem>
-      <S.MenuBarItem title="Mudar visualização">
-        <Icons.Grid />
-      </S.MenuBarItem>
       <S.MenuBarItem title="Ir para o topo">
         <Icons.Arrow />
       </S.MenuBarItem>

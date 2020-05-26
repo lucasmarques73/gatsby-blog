@@ -1,2 +1,3 @@
 import "lazysizes"
-import "prismjs/themes/prism-coy.css"
+import 'gatsby-prismjs-dracula';
+// import "prismjs/themes/prism-twilight.css"
