@@ -3,6 +3,7 @@ require("dotenv").config()
 const queries = require("./src/utils/algoliaQueries")
 
 const pluginsConfig = [
+  `gatsby-plugin-transition-link`,
   `gatsby-plugin-styled-components`,
   `gatsby-plugin-react-helmet`,
   // needs to be the first to work with gatsby-remark-images
