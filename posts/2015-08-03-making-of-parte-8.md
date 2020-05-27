@@ -1,11 +1,11 @@
 ---
-date: 2015-08-03 05:54:23
-title: "Making of - Parte 8"
-description: "Qualquer coisa"
-category: "JS"
+title: Making of - Parte 8
+description: Qualquer coisa
+date: 2015-08-03T05:54:23.000Z
+image: /assets/img/desert.jpg
+category: go
+categoryColor: "#f0f0f3"
 background: "#7AAB13"
-categoryColor: "#FFF"
-image: "/assets/img/desert.jpg"
 tags:
   - typescript
   - ts
