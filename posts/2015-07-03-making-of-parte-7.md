@@ -1,10 +1,13 @@
 ---
-date: 2015-07-03 05:54:23
-title: "Making of - Parte 7"
-description: "Qualquer coisa"
-category: "JS"
+title: Making of - Parte 7
+description: Qualquer coisa
+date: 2015-07-03T05:54:23.000Z
+image: /assets/img/mussum-ipsum.jpg
+category: devops
+categoryColor: "#3d464d"
 background: "#7AAB13"
-categoryColor: "#FFF"
+tags:
+  - devops
 ---
 
 ## Antes de qualquer coisa...
