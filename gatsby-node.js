@@ -32,8 +32,6 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
             frontmatter {
-              background
-              categoryColor
               category
               date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
               description

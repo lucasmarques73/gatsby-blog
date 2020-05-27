@@ -2,7 +2,7 @@
 date: 2015-03-03 05:54:23
 title: "Making of - Parte 3"
 description: "Quais ferramentas foram utilizadas para montar esse blog e o porquê de ter escolhido cada uma delas."
-category: "Misc"
+category: misc
 background: "#7AAB13"
 categoryColor: "#FFF"
 ---

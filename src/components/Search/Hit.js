@@ -4,8 +4,6 @@ import PostItem from "../PostItem"
 const Hit = ({ hit }) => (
   <PostItem
     slug={hit.fields.slug}
-    background={hit.background}
-    categoryColor={hit.categoryColor}
     title={hit.title}
     date={hit.date}
     description={hit.description}

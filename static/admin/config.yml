@@ -30,30 +30,5 @@ collections:
           widget: "select",
           options: ["js", "php", "go", "Dev", "react", "devops", "misc"],
         }
-      - {
-          label: "Category Color",
-          name: "categoryColor",
-          widget: "select",
-          options:
-            [
-              { label: "Black", value: "#3d464d" },
-              { label: "White", value: "#f0f0f3" },
-            ],
-        }
-      - {
-          label: "Background",
-          name: "background",
-          widget: "select",
-          options:
-            [
-              { label: "JS", value: "#F0DB4F" },
-              { label: "PHP", value: "#8892BF" },
-              { label: "Go", value: "#7fd5ea" },
-              { label: "Dev", value: "#637a91" },
-              { label: "React", value: "#61dafb" },
-              { label: "DevOps", value: "#10565c" },
-              { label: "Misc", value: "#7AAB13" },
-            ],
-        }
       - { label: "Tags", name: "tags", widget: "list", default: [""] }
       - { label: "Body", name: "body", widget: "markdown" }

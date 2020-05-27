@@ -3,17 +3,9 @@ import PropTypes from "prop-types"
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
+import mapCategoryToColors from "./mapCategoryToColors"
 
-const PostItem = ({
-  slug,
-  background,
-  categoryColor,
-  category,
-  date,
-  timeToRead,
-  title,
-  description,
-}) => (
+const PostItem = ({ slug, category, date, timeToRead, title, description }) => (
   <S.PostItemLink
     to={slug}
     cover
@@ -22,7 +14,10 @@ const PostItem = ({
     duration={0.6}
   >
     <S.PostItemWrapper>
-      <S.PostItemTag background={background} color={categoryColor}>
+      <S.PostItemTag
+        background={mapCategoryToColors[category].background}
+        color={mapCategoryToColors[category].color}
+      >
         {category}
       </S.PostItemTag>
       <S.PostItemInfo>
@@ -38,8 +33,6 @@ const PostItem = ({
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
-  background: PropTypes.string,
-  categoryColor: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   timeToRead: PropTypes.string.isRequired,
