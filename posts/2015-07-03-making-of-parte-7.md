@@ -5,7 +5,7 @@ date: 2015-07-03T05:54:23.000Z
 image: /assets/img/mussum-ipsum.jpg
 category: devops
 categoryColor: "#3d464d"
-background: "#7AAB13"
+background: "#10565c"
 tags:
   - devops
 ---
