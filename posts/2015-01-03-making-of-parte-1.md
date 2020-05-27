@@ -1,9 +1,14 @@
 ---
-date: 2015-01-03 05:54:23
-title: "Making of - Parte 1"
-description: "Quais ferramentas foram utilizadas para montar esse blog e o porquê de ter escolhido cada uma delas."
-category: "Misc"
-background: "#7AAB13"
+title: Making of - Parte 1
+description: Quais ferramentas foram utilizadas para montar esse blog e o porquê
+  de ter escolhido cada uma delas.
+date: 2015-01-03T05:54:23.000Z
+image: /assets/img/mountains.jpg
+category: php
+background: "#8892BF"
+tags:
+  - php
+  - testes
 ---
 
 ## Antes de qualquer coisa...
