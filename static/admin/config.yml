@@ -30,14 +30,15 @@ collections:
           widget: "select",
           options: ["js", "php", "go", "Dev", "react", "devops", "misc"],
         }
-        - {
+      - {
           label: "Category Color",
           name: "categoryColor",
           widget: "select",
-          options: [
-            { label: "Black", value: "#3d464d" },
-            { label: "White", value: "#f0f0f3" }
-          ],
+          options:
+            [
+              { label: "Black", value: "#3d464d" },
+              { label: "White", value: "#f0f0f3" },
+            ],
         }
       - {
           label: "Background",
