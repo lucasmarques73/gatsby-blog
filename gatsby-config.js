@@ -67,7 +67,7 @@ const pluginsConfig = [
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Lucas Marques - Blog`,
-      short_name: `Lucas Marques - Blog`,
+      short_name: `LM - Blog`,
       start_url: `/`,
       background_color: `#f0f0f3`,
       theme_color: `#f0f0f3`,
