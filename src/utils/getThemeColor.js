@@ -1,5 +1,5 @@
 const getThemeColor = () => {
-  return "#222629"
+  return "#f0f0f3"
 }
 
 export default getThemeColor
