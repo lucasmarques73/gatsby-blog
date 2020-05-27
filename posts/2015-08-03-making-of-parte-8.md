@@ -5,6 +5,10 @@ description: "Qualquer coisa"
 category: "JS"
 background: "#7AAB13"
 image: "/assets/img/desert.jpg"
+tags:
+  - typescript
+  - ts
+  - curso
 ---
 
 ## Antes de qualquer coisa...

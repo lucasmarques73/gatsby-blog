@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: lucasmarques73/gatsby-blog
+  branch: master
+  site_domain: lucasmarques-blog.netlify.app
+
+media_folder: static/assets/img
+public_folder: /assets/img
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "image", name: "image", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["js", "php", "go", "Dev", "react", "devops", "misc"],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "JS", value: "#F0DB4F" },
+              { label: "PHP", value: "#8892BF" },
+              { label: "Go", value: "#7fd5ea" },
+              { label: "Dev", value: "#637a91" },
+              { label: "React", value: "#61dafb" },
+              { label: "DevOps", value: "#10565c" },
+              { label: "Misc", value: "#7AAB13" },
+            ],
+        }
+      - { label: "Tags", name: "tags", widget: "list", default: [""] }
+      - { label: "Body", name: "body", widget: "markdown" }

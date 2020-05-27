@@ -79,6 +79,7 @@ const pluginsConfig = [
   // this (optional) plugin enables Progressive Web App + Offline functionality
   // To learn more, visit: https://gatsby.dev/offline
   `gatsby-plugin-offline`,
+  `gatsby-plugin-netlify-cms`,
 ]
 
 module.exports = {
@@ -88,7 +89,7 @@ module.exports = {
     description: `Blog para anotações sobre qualquer coisa que eu estiver estudando.`,
     author: `@lucas_marques`,
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
-    siteUrl: "https://lucasmarques.dev",
+    siteUrl: "https://lucasmarques-blog.netlify.app",
     disqusShortName: "lucas-marques-dev",
 
     postsConfig: {
