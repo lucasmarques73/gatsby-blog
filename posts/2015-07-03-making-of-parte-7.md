@@ -4,6 +4,7 @@ title: "Making of - Parte 7"
 description: "Qualquer coisa"
 category: "JS"
 background: "#7AAB13"
+categoryColor: "#FFF"
 ---
 
 ## Antes de qualquer coisa...

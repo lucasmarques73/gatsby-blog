@@ -4,6 +4,7 @@ title: "Making of - Parte 8"
 description: "Qualquer coisa"
 category: "JS"
 background: "#7AAB13"
+categoryColor: "#FFF"
 image: "/assets/img/desert.jpg"
 tags:
   - typescript

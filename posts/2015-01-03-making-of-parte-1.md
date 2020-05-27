@@ -6,6 +6,7 @@ date: 2015-01-03T05:54:23.000Z
 image: /assets/img/mountains.jpg
 category: php
 background: "#8892BF"
+categoryColor: "#FFF"
 tags:
   - php
   - testes
