@@ -5,8 +5,8 @@ description: Quais ferramentas foram utilizadas para montar esse blog e o porqu√
 date: 2015-01-03T05:54:23.000Z
 image: /assets/img/mountains.jpg
 category: php
+categoryColor: "#f0f0f3"
 background: "#8892BF"
-categoryColor: "#FFF"
 tags:
   - php
   - testes
