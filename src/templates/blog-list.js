@@ -25,7 +25,14 @@ const BlogList = ({ data, pageContext }) => {
       {postList.map(
         ({
           node: {
-            frontmatter: { background, category, date, description, title },
+            frontmatter: {
+              background,
+              categoryColor,
+              category,
+              date,
+              description,
+              title,
+            },
             timeToRead,
             fields: { slug },
           },
@@ -33,6 +40,7 @@ const BlogList = ({ data, pageContext }) => {
           <PostItem
             slug={slug}
             background={background}
+            categoryColor={categoryColor}
             category={category}
             date={date}
             timeToRead={timeToRead}
@@ -67,6 +75,7 @@ export const query = graphql`
           }
           frontmatter {
             background
+            categoryColor
             category
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description

@@ -21,9 +21,10 @@ export const PostItemWrapper = styled.section`
 
 export const PostItemTag = styled.div`
   align-items: center;
-  background: ${props => (props.background ? props.background : "var(--highlight)")};
+  background: ${props =>
+    props.background ? props.background : "var(--highlight)"};
   border-radius: 50%;
-  color: var(--postColor);
+  color: ${props => (props.color ? props.color : "var(--postColor)")};
   display: flex;
   font-size: 1.3rem;
   font-weight: 700;
