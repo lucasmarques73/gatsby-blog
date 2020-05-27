@@ -5,7 +5,7 @@ date: 2015-08-03T05:54:23.000Z
 image: /assets/img/desert.jpg
 category: go
 categoryColor: "#f0f0f3"
-background: "#7AAB13"
+background: "#7fd5ea"
 tags:
   - typescript
   - ts
