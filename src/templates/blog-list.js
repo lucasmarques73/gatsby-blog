@@ -20,7 +20,7 @@ const BlogList = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title="Home" />
 
       {postList.map(
         ({
