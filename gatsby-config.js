@@ -66,27 +66,16 @@ const pluginsConfig = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `gatsby-starter-default`,
-      short_name: `starter`,
+      name: `Lucas Marques - Blog`,
+      short_name: `Lucas Marques - Blog`,
       start_url: `/`,
-      background_color: `#663399`,
-      theme_color: `#663399`,
+      background_color: `#f0f0f3`,
+      theme_color: `#f0f0f3`,
       display: `minimal-ui`,
-      icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      icon: `src/images/icon.png`, // This path is relative to the root of the site.
     },
   },
-  // Simple config, passing URL
-  {
-    resolve: "gatsby-source-graphql",
-    options: {
-      // Arbitrary name for the remote schema Query type
-      typeName: "PERSONAL_API",
-      // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-      fieldName: "personalApi",
-      // Url to query from
-      url: "https://playground-graphql-lm.herokuapp.com/",
-    },
-  }
+  `gatsby-plugin-sitemap`,
   // this (optional) plugin enables Progressive Web App + Offline functionality
   // To learn more, visit: https://gatsby.dev/offline
   // `gatsby-plugin-offline`,
