@@ -61,6 +61,7 @@ export const ProjectItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
+  text-align: center;
 `
 
 export const ProjectItemTitle = styled.h1`
