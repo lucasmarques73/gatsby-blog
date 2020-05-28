@@ -24,14 +24,20 @@ collections:
           widget: "datetime",
           format: "YYYY-MM-DD hh:mm:ss",
         }
-      - { label: "image", name: "image", widget: "image" }
+      - { label: "image", name: "image", widget: "image", required: false }
       - {
           label: "Category",
           name: "category",
           widget: "select",
           options: ["js", "php", "go", "Dev", "react", "devops", "misc"],
         }
-      - { label: "Tags", name: "tags", widget: "list", default: [""] }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: [""],
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "projects"
