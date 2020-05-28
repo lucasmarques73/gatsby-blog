@@ -75,3 +75,18 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "pages/404.md"
+        label: "Not Found"
+        name: "notFound"
+        create: true
+        fields:
+          - { label: "Type", name: "type", widget: "hidden", default: "page" }
+          - {
+              label: "Category",
+              name: "category",
+              widget: "hidden",
+              default: "notFound",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
