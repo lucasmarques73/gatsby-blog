@@ -4,13 +4,24 @@ date: 2014-07-03T03:54:23.000Z
 type: page
 category: sobre
 ---
+Meu nome é Lucas Marques, sou desenvolvedor web desde 2015.  
+Vindo do interior de Minas Gerais, atualmente trabalhando em São Paulo - SP. Já trabalhei em empresas como [4Linux](https://www.4linux.com.br/), [Red Ventures](https://www.redventures.com/), [Lambda3](https://www.lambda3.com.br/) e outras.   Sou formado em Sistemas de Informação pela UEMG em Passos - MG.  
+Apaixonado por tecnologia, gosto de estar sempre estudando algo, desde Infraestrutura, passando por Banco de Dados, Back-end até Front-end. Buscando ser aquele famoso *Fullstack*.
 
-## Antes de qualquer coisa...
+### Habilidades
 
-Lucas
-![Desert](/assets/img/desert.jpg)
+* Back-end
+> Php, Golang, NodeJS, Testes, Orientação a Objetos e Desenvolvimento de APIs.
 
-Meu nome é Willian Justen de Vasconcellos, tenho 24 anos (nada de piadinhas...) e sou Desenvolvedor Front End no [Queremos!](https://queremos.com.br)/[WeDemand](https://wedemand.com). Trabalho há cerca de 3 anos na área de web, tendo finalizado meu curso de Tecnologia da Informação na Faeterj-Petrópolis no ano de 2014. Mas curiosamente essa não foi minha primeira faculdade, eu também fiz **Química Industrial** na Uff, sim, você leu certo, eu realmente fiz Química...
-E por que eu trabalho com web agora? Ah...porque web é incrível e a facilidade em aprender cada dia mais, me deixa mais feliz com a escolha que fiz.
+* Front-end
+> React, Redux, Testes 
 
-Eu pretendo escrever o máximo que der e sobre tudo, desde o avançado até dicas rápidas para iniciantes. O foco principal será em tecnologias Front End, mas isso não impede que um dia escreva sobre Python ou alguma técnica de estudo. Espero que gostem do blog e todo feedback é bem vindo =)
+* Banco de dados
+> MySQL, MariaDB e PostgreSQL
+
+* Infra
+> Git, CI/CD e Docker
+
+* Outros
+> SCRUM e Métodos Ágeis.
+
