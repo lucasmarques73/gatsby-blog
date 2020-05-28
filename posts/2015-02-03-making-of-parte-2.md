@@ -3,6 +3,7 @@ date: 2015-02-03 05:54:23
 title: "Making of - Parte 2"
 description: "Qualquer coisa"
 category: misc
+type: post
 ---
 
 ## Antes de qualquer coisa...

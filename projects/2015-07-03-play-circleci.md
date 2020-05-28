@@ -3,7 +3,8 @@ title: Brincando com CircleCI
 description: Qualquer coisa sobre CircleCI
 date: 2015-07-03T03:54:23.000Z
 image: /assets/img/desert.jpg
-category: projects
+category: projetos
+type: page
 ---
 
 ## Antes de qualquer coisa...

@@ -37,6 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
               description
               title
               image
+              type
             }
             timeToRead
           }
@@ -70,11 +71,9 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     const allPages = result.data.allMarkdownRemark.edges
 
-    const notPostCategory = category => ["projects", "about"].includes(category)
+    const isPost = type => "post" === type
 
-    const pages = allPages.filter(({ node }) =>
-      notPostCategory(node.frontmatter.category)
-    )
+    const pages = allPages.filter(({ node }) => !isPost(node.frontmatter.type))
 
     // Create pages by slug
     pages.forEach(({ node }) => {
@@ -87,9 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    const posts = allPages.filter(
-      ({ node }) => !notPostCategory(node.frontmatter.category)
-    )
+    const posts = allPages.filter(({ node }) => isPost(node.frontmatter.type))
 
     // Fix Linked List
     posts.forEach((item, index, arr) => {

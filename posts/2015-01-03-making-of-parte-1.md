@@ -4,6 +4,7 @@ description: Quais ferramentas foram utilizadas para montar esse blog e o porqu√
   de ter escolhido cada uma delas.
 date: 2015-01-03T05:54:23.000Z
 image: /assets/img/mountains.jpg
+type: post
 category: php
 tags:
   - php

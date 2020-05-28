@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -37,7 +38,7 @@ const ProjectsPage = ({ data }) => {
 export const query = graphql`
   query ProjectsList {
     allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: "projects" } } }
+      filter: { frontmatter: { category: { eq: "projetos" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {

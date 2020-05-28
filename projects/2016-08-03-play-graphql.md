@@ -3,7 +3,8 @@ title: Brincando com GraphQL
 description: Qualquer coisa sobre GraphQL
 date: 2016-08-03T05:54:23.000Z
 image: /assets/img/desert.jpg
-category: projects
+category: projetos
+type: page
 ---
 
 ## Antes de qualquer coisa...

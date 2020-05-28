@@ -4,6 +4,7 @@ description: Qualquer coisa
 date: 2015-08-03T05:54:23.000Z
 image: /assets/img/desert.jpg
 category: go
+type: post
 tags:
   - typescript
   - ts

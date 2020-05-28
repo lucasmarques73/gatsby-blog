@@ -3,7 +3,8 @@ title: Brincando com Travis CI
 description: Qualquer coisa sobre Travis CI
 date: 2014-07-03T03:54:23.000Z
 image: /assets/img/lake.jpg
-category: projects
+category: projetos
+type: page
 ---
 
 ## Antes de qualquer coisa...

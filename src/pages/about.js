@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -24,7 +25,7 @@ const AboutPage = ({ data }) => {
 
 export const query = graphql`
   query AboutPage {
-    markdownRemark(frontmatter: { category: { eq: "about" } }) {
+    markdownRemark(frontmatter: { category: { eq: "sobre" } }) {
       frontmatter {
         title
         category

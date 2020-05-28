@@ -1,7 +1,9 @@
 require("dotenv").config()
 
 const postQuery = `{
-  posts: allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }){
+  posts: allMarkdownRemark(
+    sort: {fields: frontmatter___date, order: DESC}
+    filter: {frontmatter: {type: {eq: "post"}}}) {
     edges {
       node {
         objectID: id

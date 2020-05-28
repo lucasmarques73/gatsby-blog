@@ -4,6 +4,7 @@ description: Qualquer coisa
 date: 2015-07-03T05:54:23.000Z
 image: /assets/img/mussum-ipsum.jpg
 category: devops
+type: post
 tags:
   - devops
 ---

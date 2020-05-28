@@ -4,6 +4,7 @@ description: Qualquer coisa
 date: 2015-06-03T05:54:23.000Z
 image: /assets/img/volcano.jpg
 category: js
+type: post
 tags:
   - js
 ---

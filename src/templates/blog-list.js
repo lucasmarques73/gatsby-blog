@@ -58,7 +58,7 @@ const BlogList = ({ data, pageContext }) => {
 export const query = graphql`
   query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
-      filter: { frontmatter: { category: { nin: "projects" } } }
+      filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
       skip: $skip
