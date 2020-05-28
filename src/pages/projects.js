@@ -38,6 +38,7 @@ export const query = graphql`
   query ProjectsList {
     allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "projects" } } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
