@@ -3,32 +3,32 @@ import PropTypes from "prop-types"
 import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
-import mapCategoryToColors from "./mapCategoryToColors"
+import mapCategoryToColors from "../../styles/mapCategoryToColors"
 
 const PostItem = ({ slug, category, date, timeToRead, title, description }) => (
-  <S.ListItemsLink
+  <S.PostItemLink
     to={slug}
     cover
     direction="down"
     bg={getThemeColor()}
     duration={0.6}
   >
-    <S.ListItemsWrapper>
-      <S.ListItemsTag
+    <S.PostItemWrapper>
+      <S.PostItemTag
         background={mapCategoryToColors[category].background}
         color={mapCategoryToColors[category].color}
       >
         {category}
-      </S.ListItemsTag>
-      <S.ListItemsInfo>
-        <S.ListItemsDate>
+      </S.PostItemTag>
+      <S.PostItemInfo>
+        <S.PostItemDate>
           {date} {timeToRead && ` • ${timeToRead} min de leitura`}
-        </S.ListItemsDate>
-        <S.ListItemsTitle>{title}</S.ListItemsTitle>
-        <S.ListItemsDescription>{description}</S.ListItemsDescription>
-      </S.ListItemsInfo>
-    </S.ListItemsWrapper>
-  </S.ListItemsLink>
+        </S.PostItemDate>
+        <S.PostItemTitle>{title}</S.PostItemTitle>
+        <S.PostItemDescription>{description}</S.PostItemDescription>
+      </S.PostItemInfo>
+    </S.PostItemWrapper>
+  </S.PostItemLink>
 )
 
 PostItem.propTypes = {

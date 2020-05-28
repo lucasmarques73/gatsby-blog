@@ -1,5 +1,5 @@
 import React from "react"
-import PostItem from "../ListItems/PostItem"
+import PostItem from "../PostItem"
 
 const Hit = ({ hit }) => (
   <PostItem

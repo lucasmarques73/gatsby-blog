@@ -3,7 +3,8 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import ProjectItem from "../components/ListItems/ProjectItem"
+import ProjectItem from "../components/Projects/ProjectItem"
+import * as S from "../components/Projects/styled"
 
 const ProjectsPage = ({ data }) => {
   const projectsList = data.allMarkdownRemark.edges
@@ -11,26 +12,28 @@ const ProjectsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projetos" />
-      {projectsList.map(
-        (
-          {
-            node: {
-              frontmatter: { category, description, title, image },
-              fields: { slug },
+      <S.ProjectGridWrapper>
+        {projectsList.map(
+          (
+            {
+              node: {
+                frontmatter: { category, description, title, image },
+                fields: { slug },
+              },
             },
-          },
-          key
-        ) => (
-          <ProjectItem
-            key={key}
-            slug={slug}
-            category={category}
-            title={title}
-            description={description}
-            image={image}
-          />
-        )
-      )}
+            key
+          ) => (
+            <ProjectItem
+              key={key}
+              slug={slug}
+              category={category}
+              title={title}
+              description={description}
+              image={image}
+            />
+          )
+        )}
+      </S.ProjectGridWrapper>
     </Layout>
   )
 }

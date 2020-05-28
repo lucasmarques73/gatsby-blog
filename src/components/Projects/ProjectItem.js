@@ -4,33 +4,33 @@ import getThemeColor from "../../utils/getThemeColor"
 
 import Image from "./Image"
 import * as S from "./styled"
-import mapCategoryToColors from "./mapCategoryToColors"
+import mapCategoryToColors from "../../styles/mapCategoryToColors"
 
 const ProjectItem = ({ slug, category, title, description, image }) => (
-  <S.ListItemsLink
+  <S.ProjectItemLink
     to={slug}
     cover
     direction="down"
     bg={getThemeColor()}
     duration={0.6}
   >
-    <S.ListItemsWrapper>
+    <S.ProjectItemWrapper>
       {image ? (
         <Image filename={image} alt={title} />
       ) : (
-        <S.ListItemsTag
+        <S.ProjectItemTag
           background={mapCategoryToColors[category].background}
           color={mapCategoryToColors[category].color}
         >
           {category}
-        </S.ListItemsTag>
+        </S.ProjectItemTag>
       )}
-      <S.ListItemsInfo>
-        <S.ListItemsTitle>{title}</S.ListItemsTitle>
-        <S.ListItemsDescription>{description}</S.ListItemsDescription>
-      </S.ListItemsInfo>
-    </S.ListItemsWrapper>
-  </S.ListItemsLink>
+      <S.ProjectItemInfo>
+        <S.ProjectItemTitle>{title}</S.ProjectItemTitle>
+        <S.ProjectItemDescription>{description}</S.ProjectItemDescription>
+      </S.ProjectItemInfo>
+    </S.ProjectItemWrapper>
+  </S.ProjectItemLink>
 )
 
 ProjectItem.propTypes = {

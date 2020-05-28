@@ -1,16 +1,15 @@
-import Img from "gatsby-image"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import media from "styled-media-query"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-export const ListItemsLink = styled(AniLink)`
-  color: var(--texts);
-  display: flex;
-  text-decoration: none;
-
-  &:hover {
-    color: var(--highlight);
-  }
+export const ProjectGridWrapper = styled.section`
+  background-color: var(--background);
+  /* border-bottom: 1px solid var(--borders); */
+  display: grid;
+  grid-area: posts;
+  grid-gap: 1px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 `
 
 export const ImageWrapper = styled(Img)`
@@ -24,15 +23,28 @@ export const ImageWrapper = styled(Img)`
   `}
 `
 
-export const ListItemsWrapper = styled.section`
+export const ProjectItemWrapper = styled.section`
   align-items: center;
-  border-bottom: 1px solid var(--borders);
+  border: 1px solid var(--borders);
   display: flex;
-  padding: 2rem 3rem;
   width: 100%;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  justify-content: center;
 `
 
-export const ListItemsTag = styled.div`
+export const ProjectItemLink = styled(AniLink)`
+  color: var(--texts);
+  display: flex;
+  text-decoration: none;
+  background-color: var(--background);
+
+  &:hover {
+    color: var(--highlight);
+  }
+`
+
+export const ProjectItemTag = styled.div`
   align-items: center;
   background: ${props =>
     props.background ? props.background : "var(--highlight)"};
@@ -45,25 +57,23 @@ export const ListItemsTag = styled.div`
   min-height: 90px;
   min-width: 90px;
   text-transform: uppercase;
+  margin-bottom: 1.5rem;
 `
 
-export const ListItemsInfo = styled.div`
+export const ProjectItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
 `
 
-export const ListItemsDate = styled.time`
-  font-size: 0.9rem;
-`
-
-export const ListItemsTitle = styled.h1`
+export const ProjectItemTitle = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
-  margin: 0.2rem 0 0.5rem;
+  line-height: 1.1;
+  margin: 0.8rem 0;
 `
 
-export const ListItemsDescription = styled.p`
+export const ProjectItemDescription = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;
