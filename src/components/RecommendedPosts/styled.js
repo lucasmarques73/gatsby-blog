@@ -7,12 +7,6 @@ export const RecommendedWrapper = styled.section`
   border-top: 1px solid var(--borders);
   background: var(--mediumBackground);
   display: flex;
-
-  ${media.lessThan("large")`
-    padding: 2rem 1rem;
-    line-height: 1.3;
-    font-size: .9rem;
-  `}
 `
 
 export const RecommendedLink = styled(AniLink)`
@@ -24,6 +18,13 @@ export const RecommendedLink = styled(AniLink)`
   text-decoration: none;
   transition: background 0.5s;
   width: 50%;
+
+  ${media.lessThan("large")`
+    padding: 2rem 1rem;
+    line-height: 1.3;
+    font-size: .9rem;
+  `}
+
   &:hover {
     background: var(--borders);
   }
@@ -32,6 +33,10 @@ export const RecommendedLink = styled(AniLink)`
   }
   &.next {
     justify-content: flex-end;
+  }
+  &.next:only-child {
+    margin-left: auto;
+    border-left: 1px solid var(--borders);
   }
   &.previous:before {
     content: "\\2190";
