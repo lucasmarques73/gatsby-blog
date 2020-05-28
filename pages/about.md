@@ -10,26 +10,18 @@ Apaixonado por tecnologia, gosto de estar sempre estudando algo, desde Infraestr
 
 ### Habilidades
 
-#### Back-end
-- Php
-- Golang
-- NodeJS
-- Testes
-- Orientação a Objetos
-- Desenvolvimento de APIs
+* Back-end
+> Php, Golang, NodeJS, Testes, Orientação a Objetos e Desenvolvimento de APIs.
 
-#### Front-end
-- React
-- Redux
-- Testes
+* Front-end
+> React, Redux, Testes 
 
-#### Banco de dados
-- MySQL
-- MariaDB
-- PostgreSQL
+* Banco de dados
+> MySQL, MariaDB e PostgreSQL
 
-#### Infra
-- Git
-- CI/CD
-- Docker
+* Infra
+> Git, CI/CD e Docker
+
+* Outros
+> SCRUM e Métodos Ágeis.
 
