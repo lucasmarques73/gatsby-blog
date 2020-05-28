@@ -9,12 +9,12 @@ public_folder: /assets/img
 publish_mode: editorial_workflow
 
 collections:
-  - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - {
@@ -33,20 +33,19 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", default: [""] }
       - { label: "Body", name: "body", widget: "markdown" }
 
-
-   - name: "projects" # Used in routes, e.g., /admin/collections/blog
-      label: "Projects" # Used in the UI
-      folder: "projects" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-      fields: # The fields for each document, usually in front matter
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "image", name: "image", widget: "image" }
-        - {
-            label: "Category",
-            name: "category",
-            widget: "hidden",
-            default: "projects",
-          }
-        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "image", name: "image", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "hidden",
+          default: "projects",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
