@@ -1,8 +1,8 @@
 ---
-title: Brincando com Travis
-description: Qualquer coisa sobre Travis
+title: Brincando com Travis CI
+description: Qualquer coisa sobre Travis CI
 date: 2014-07-03T03:54:23.000Z
-image: /assets/img/desert.jpg
+image: /assets/img/lake.jpg
 category: projects
 ---
 
