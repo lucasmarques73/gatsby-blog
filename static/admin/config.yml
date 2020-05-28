@@ -54,7 +54,6 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    folder: "pages"
     files:
       - file: "pages/about.md"
         label: "About"
