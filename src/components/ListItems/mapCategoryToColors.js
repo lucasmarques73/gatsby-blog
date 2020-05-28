@@ -27,6 +27,10 @@ const mapCategoryToColors = {
     background: "#7AAB13",
     color: "#f0f0f3",
   },
+  projects: {
+    background: "#FF5733",
+    color: "#3d464d",
+  },
 }
 
 export default mapCategoryToColors

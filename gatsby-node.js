@@ -68,9 +68,50 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
+    const allPages = result.data.allMarkdownRemark.edges
+
+    const notPostCategory = category => ["projects", "about"].includes(category)
+
+    const pages = allPages.filter(({ node }) =>
+      notPostCategory(node.frontmatter.category)
+    )
 
     // Create pages by slug
+    pages.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve("./src/templates/blog-page.js"),
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+
+    const posts = allPages.filter(
+      ({ node }) => !notPostCategory(node.frontmatter.category)
+    )
+
+    // Fix Linked List
+    posts.forEach((item, index, arr) => {
+      if (arr[index + 1] === undefined) item.next = null
+      if (arr[index - 1] === undefined) item.previous = null
+
+      if (
+        item.next &&
+        arr[index + 1] &&
+        item.next.fields.slug !== arr[index + 1].node.fields.slug
+      )
+        item.next = arr[index + 1].node
+
+      if (
+        item.previous &&
+        arr[index - 1] &&
+        item.previous.fields.slug !== arr[index - 1].node.fields.slug
+      )
+        item.previous = arr[index - 1].node
+    })
+
+    // Create post page by slug
     posts.forEach(({ node, next, previous }) => {
       createPage({
         path: node.fields.slug,
@@ -81,6 +122,13 @@ exports.createPages = ({ graphql, actions }) => {
           nextPost: previous,
         },
       })
+    })
+
+    posts.forEach(({ node, next, previous }) => {
+      console.log("previous Title", previous && previous.frontmatter.title)
+      console.log("node Title", node.frontmatter.title)
+      console.log("next Title", next && next.frontmatter.title)
+      console.log("-------------------------")
     })
 
     // Create pagination to post list

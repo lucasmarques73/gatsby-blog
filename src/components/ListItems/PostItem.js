@@ -6,36 +6,36 @@ import * as S from "./styled"
 import mapCategoryToColors from "./mapCategoryToColors"
 
 const PostItem = ({ slug, category, date, timeToRead, title, description }) => (
-  <S.PostItemLink
+  <S.ListItemsLink
     to={slug}
     cover
     direction="down"
     bg={getThemeColor()}
     duration={0.6}
   >
-    <S.PostItemWrapper>
-      <S.PostItemTag
+    <S.ListItemsWrapper>
+      <S.ListItemsTag
         background={mapCategoryToColors[category].background}
         color={mapCategoryToColors[category].color}
       >
         {category}
-      </S.PostItemTag>
-      <S.PostItemInfo>
-        <S.PostItemDate>
-          {date} • {timeToRead && ` • ${timeToRead} min de leitura`}
-        </S.PostItemDate>
-        <S.PostItemTitle>{title}</S.PostItemTitle>
-        <S.PostItemDescription>{description}</S.PostItemDescription>
-      </S.PostItemInfo>
-    </S.PostItemWrapper>
-  </S.PostItemLink>
+      </S.ListItemsTag>
+      <S.ListItemsInfo>
+        <S.ListItemsDate>
+          {date} {timeToRead && ` • ${timeToRead} min de leitura`}
+        </S.ListItemsDate>
+        <S.ListItemsTitle>{title}</S.ListItemsTitle>
+        <S.ListItemsDescription>{description}</S.ListItemsDescription>
+      </S.ListItemsInfo>
+    </S.ListItemsWrapper>
+  </S.ListItemsLink>
 )
 
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string,
+  timeToRead: PropTypes.number,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }

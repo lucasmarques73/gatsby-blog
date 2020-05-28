@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import PostItem from "../components/PostItem"
+import PostItem from "../components/ListItems/PostItem"
 import Pagination from "../components/Pagination"
 
 const BlogList = ({ data, pageContext }) => {
@@ -21,16 +21,19 @@ const BlogList = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Home" />
-
       {postList.map(
-        ({
-          node: {
-            frontmatter: { category, date, description, title },
-            timeToRead,
-            fields: { slug },
+        (
+          {
+            node: {
+              frontmatter: { category, date, description, title },
+              timeToRead,
+              fields: { slug },
+            },
           },
-        }) => (
+          key
+        ) => (
           <PostItem
+            key={key}
             slug={slug}
             category={category}
             date={date}
@@ -55,6 +58,7 @@ const BlogList = ({ data, pageContext }) => {
 export const query = graphql`
   query PostList($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
+      filter: { frontmatter: { category: { nin: "projects" } } }
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
       skip: $skip

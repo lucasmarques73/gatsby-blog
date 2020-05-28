@@ -4,8 +4,6 @@ description: Qualquer coisa
 date: 2015-06-03T05:54:23.000Z
 image: /assets/img/volcano.jpg
 category: js
-categoryColor: "#f0f0f3"
-background: "#F0DB4F"
 tags:
   - js
 ---
