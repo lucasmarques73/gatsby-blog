@@ -124,13 +124,6 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    posts.forEach(({ node, next, previous }) => {
-      console.log("previous Title", previous && previous.frontmatter.title)
-      console.log("node Title", node.frontmatter.title)
-      console.log("next Title", next && next.frontmatter.title)
-      console.log("-------------------------")
-    })
-
     // Create pagination to post list
     const postsBasePath =
       result.data.site.siteMetadata.postsConfig.postsBasePath
