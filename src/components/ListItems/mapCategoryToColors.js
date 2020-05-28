@@ -29,7 +29,11 @@ const mapCategoryToColors = {
   },
   projects: {
     background: "#FF5733",
-    color: "#3d464d",
+    color: "#f0f0f3",
+  },
+  about: {
+    background: "#0e1e24",
+    color: "#f0f0f3",
   },
 }
 
