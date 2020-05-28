@@ -36,6 +36,13 @@ const pluginsConfig = [
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `posts`,
+      path: `${__dirname}/pages`,
+    },
+  },
+  {
     resolve: `gatsby-transformer-remark`,
     options: {
       plugins: [

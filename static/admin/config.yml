@@ -49,3 +49,21 @@ collections:
           default: "projects",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "pages"
+    files:
+      - file: "pages/about.md"
+        label: "About"
+        name: "about"
+        create: true
+        fields:
+          - {
+              label: "Category",
+              name: "category",
+              widget: "hidden",
+              default: "about",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
