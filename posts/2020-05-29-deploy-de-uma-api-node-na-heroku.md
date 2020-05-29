@@ -42,3 +42,4 @@ Para colocarmos ela online na heroku, o primeiro passo é [criar uma conta](http
 
 ![Tela de cadastro na Heroku](/assets/img/heroku-signup-screen.png "Tela de cadastro na Heroku")
 
+Após o cadastro feito, nós temos que que criar uma nova aplicação dentro da plataforma. Esta aplicação que será nosso servidor que vai rodar nossa api.
