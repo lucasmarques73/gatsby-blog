@@ -94,6 +94,13 @@ const pluginsConfig = [
   // To learn more, visit: https://gatsby.dev/offline
   `gatsby-plugin-offline`,
   `gatsby-plugin-netlify-cms`,
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      head: false,
+    },
+  },
 ]
 
 module.exports = {
