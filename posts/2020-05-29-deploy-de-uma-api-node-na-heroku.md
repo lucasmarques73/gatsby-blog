@@ -55,5 +55,23 @@ Ela até já disponibilizou uma **URL** para acessarmos nossa aplicação.
 
 Agora, através do dashboard, nós vamos conectar nossa aplicação criada na Heroku, com nosso repositório no Github.
 
-![Conectando aplicação Heroku com Github](/assets/img/dashboard-arrow-github.png "Conectando aplicação Heroku com Github")
+Clico no ícone do Github para conectar com ele, e pesquiso pelo meu repositório. Talvez você tenha que dar permissão de acesso para a Heroku acessar seus repositórios.
 
+![Conectando aplicação Heroku com Github](/assets/img/heroku-choose-github-repo.png "Conectando aplicação Heroku com Github")
+
+Após escolher o repositório, a Heroku já vai fazer o deploy da branch **master** e nossa api já vai estar online.
+
+![Dashboard após conectar com repositório](/assets/img/app-after-conect-github.png "Dashboard após conectar com repositório")
+
+Para confirmar, basta acessarmos a url que foi criada para vermos a resposta da nossa api.
+
+![Aplicação respondendo através da nossa api](/assets/img/api-ok.png "Aplicação respondendo através da nossa api")
+
+Com isso já temos pronto nosso servidor, servindo através de um servidor Node nossa api.  
+Uma coisa que gosto de fazer, é habilitar o deploy automárico. Com isso, sempre que nossa branch master tiver alterações, automaticamente vai ser feito deploy dela.
+Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
+
+Nos próximos posts pretendo explicar como podemos testar essa nossa api e após isso, fazer os testes serem executados sempre que alterarmos a master, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
+
+Valeu pessoas por terem lido até aqui.
+Até a próxima.
