@@ -110,7 +110,7 @@ module.exports = {
     description: `Blog para anotações sobre qualquer coisa que eu estiver estudando.`,
     author: `@lucas_marques`,
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
-    siteUrl: "https://lucasmarques-blog.netlify.app",
+    siteUrl: "https://lucasmarques.dev",
     disqusShortName: "lucas-marques-dev",
 
     postsConfig: {
