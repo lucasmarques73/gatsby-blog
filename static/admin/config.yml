@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: lucasmarques73/gatsby-blog
+  repo: lucasmarques73/lucasmarques.dev
   branch: master
-  site_domain: lucasmarques-blog.netlify.app
+  site_domain: lucasmarques.dev
 
 media_folder: static/assets/img
 public_folder: /assets/img
