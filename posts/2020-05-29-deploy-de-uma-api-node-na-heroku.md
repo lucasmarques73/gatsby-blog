@@ -35,6 +35,7 @@ app.listen(process.env.PORT || port, () =>
 );
 ```
 
+
 Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua api na porta **80**.\
 Para colocarmos ela online na heroku, o primeiro passo é [criar uma conta](https://signup.heroku.com/) na plataforma:
 
