@@ -4,6 +4,8 @@ import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
 
+import { recommendedClickTrack } from "../../analytics"
+
 const RecommendedPosts = ({ next, previous }) => (
   <S.RecommendedWrapper>
     {previous && (
@@ -13,6 +15,7 @@ const RecommendedPosts = ({ next, previous }) => (
         direction="left"
         bg={getThemeColor()}
         className="previous"
+        onClick={() => recommendedClickTrack()}
       >
         {previous.frontmatter.title}
       </S.RecommendedLink>
@@ -24,6 +27,7 @@ const RecommendedPosts = ({ next, previous }) => (
         direction="right"
         bg={getThemeColor()}
         className="next"
+        onClick={() => recommendedClickTrack()}
       >
         {next.frontmatter.title}
       </S.RecommendedLink>

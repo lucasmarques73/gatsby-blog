@@ -5,6 +5,8 @@ import Icons from "./Icons"
 
 import * as S from "./styled"
 
+import { socialLinkClickTrack } from "../../analytics"
+
 const SocialLinks = () => {
   const {
     site: {
@@ -36,6 +38,7 @@ const SocialLinks = () => {
                 title={link.label}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => socialLinkClickTrack(link.label)}
               >
                 <S.IconWrapper>
                   <Icon />

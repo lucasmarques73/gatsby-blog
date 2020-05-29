@@ -4,6 +4,8 @@ import getThemeColor from "../../utils/getThemeColor"
 
 import * as S from "./styled"
 
+import { menuLinkClickTrack } from "../../analytics"
+
 const MenuLinks = () => {
   const {
     site: {
@@ -33,6 +35,7 @@ const MenuLinks = () => {
               bg={getThemeColor()}
               duration={0.6}
               to={link.url}
+              onClick={() => menuLinkClickTrack(link.label)}
               activeClassName="active"
             >
               {link.label}

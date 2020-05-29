@@ -5,6 +5,11 @@ import getThemeColor from "../../utils/getThemeColor"
 import Icons from "./Icons"
 
 import * as S from "./styled"
+import {
+  homeClickTrack,
+  searchClickTrack,
+  topClickTrack,
+} from "../../analytics"
 
 const MenuBar = () => (
   <S.MenuBarWrapper>
@@ -16,6 +21,7 @@ const MenuBar = () => (
         bg={getThemeColor()}
         duration={0.6}
         title="Voltar para Home"
+        onClick={() => homeClickTrack()}
       >
         <S.MenuBarItem>
           <Icons.Home />
@@ -28,6 +34,7 @@ const MenuBar = () => (
         bg={getThemeColor()}
         duration={0.6}
         title="Pesquisar"
+        onClick={() => searchClickTrack()}
       >
         <S.MenuBarItem>
           <Icons.Search />
@@ -38,6 +45,7 @@ const MenuBar = () => (
       <S.MenuBarItem
         title="Ir para o topo"
         onClick={() => {
+          topClickTrack()
           window.scroll({ top: 0, behavior: "smooth" })
         }}
       >
