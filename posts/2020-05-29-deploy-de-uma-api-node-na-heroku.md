@@ -24,7 +24,8 @@ Tenho no meu github, um [repositório](https://github.com/lucasmarques73/node-ap
 
 Este é o código da nossa API:
 
-```jsconst
+```javascript
+const express = require("express");
 const app = express();
 const port = 3000;
 
@@ -34,6 +35,7 @@ app.listen(process.env.PORT || port, () =>
   console.log(`Server running in ${port}`)
 );
 ```
+
 
 
 Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua api na porta **80**.\
