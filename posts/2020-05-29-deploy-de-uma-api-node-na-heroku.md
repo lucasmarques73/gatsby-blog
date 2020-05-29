@@ -49,7 +49,7 @@ Quando nós criamos, devemos escolher um nome para nossa aplicação e onde ela 
 ![Escolhendo nome para aplicação](/assets/img/choose-name-app.png "Escolhendo nome para aplicação")
 
 Após isso, nós vamos ter nossa aplicação na Heroku.\
-Ela até já disponibilizou uma **URL** para acessarmos nossa aplicação.
+Ela até já disponibilizou uma **URL** para acessarmos nossa aplicação. E esta url já está utilizando **https**.
 
 ![Url da nossa aplicação](/assets/img/url-app.png "Url da nossa aplicação")
 
