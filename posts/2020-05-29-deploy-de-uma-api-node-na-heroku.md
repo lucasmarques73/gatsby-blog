@@ -24,7 +24,6 @@ Tenho no meu github, um [repositório](https://github.com/lucasmarques73/node-ap
 
 Este é o código da nossa API:
 
-
 ```jsconst
 const app = express();
 const port = 3000;
@@ -36,10 +35,25 @@ app.listen(process.env.PORT || port, () =>
 );
 ```
 
-
 Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua api na porta **80**.\
 Para colocarmos ela online na heroku, o primeiro passo é [criar uma conta](https://signup.heroku.com/) na plataforma:
 
 ![Tela de cadastro na Heroku](/assets/img/heroku-signup-screen.png "Tela de cadastro na Heroku")
 
 Após o cadastro feito, nós temos que que criar uma nova aplicação dentro da plataforma. Esta aplicação que será nosso servidor que vai rodar nossa api.
+
+![Dashboar da Heroku, clicando para criar uma nova aplicação](/assets/img/new-app-heroku.png "Dashboar da Heroku, clicando para criar uma nova aplicação")
+
+Quando nós criamos, devemos escolher um nome para nossa aplicação e onde ela vai ser hospedada, neste caso coloquei o nome **node-api-heroku-lm** e a região foi **Estados Unidos**
+
+![Escolhendo nome para aplicação](/assets/img/choose-name-app.png "Escolhendo nome para aplicação")
+
+Após isso, nós vamos ter nossa aplicação na Heroku.\
+Ela até já disponibilizou uma **URL** para acessarmos nossa aplicação.
+
+![Url da nossa aplicação](/assets/img/url-app.png "Url da nossa aplicação")
+
+Agora, através do dashboard, nós vamos conectar nossa aplicação criada na Heroku, com nosso repositório no Github.
+
+![Conectando aplicação Heroku com Github](/assets/img/dashboard-arrow-github.png "Conectando aplicação Heroku com Github")
+
