@@ -39,6 +39,7 @@
     "gsap": "^3.2.6",
     "lazysizes": "^5.2.0",
     "netlify-cms-app": "^2.12.13",
+    "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
