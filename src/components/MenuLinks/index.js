@@ -6,7 +6,7 @@ import * as S from "./styled"
 
 import { menuLinkClickTrack } from "../../analytics"
 
-const MenuLinks = () => {
+const MenuLinks = ({ setIsMenuOpen, isMenuOpen }) => {
   const {
     site: {
       siteMetadata: { pages },
@@ -35,7 +35,10 @@ const MenuLinks = () => {
               bg={getThemeColor()}
               duration={0.6}
               to={link.url}
-              onClick={() => menuLinkClickTrack(link.label)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen)
+                menuLinkClickTrack(link.label)
+              }}
               activeClassName="active"
             >
               {link.label}

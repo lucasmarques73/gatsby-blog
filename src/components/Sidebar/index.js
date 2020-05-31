@@ -6,11 +6,13 @@ import SocialLinks from "../SocialLinks"
 import * as S from "./styled"
 import MenuLinks from "../MenuLinks"
 
-const Sidebar = () => (
-  <S.SidebarWrapper>
-    <Profile />
-    <SocialLinks />
-    <MenuLinks />
+const Sidebar = ({ setIsMenuOpen, isMenuOpen }) => (
+  <S.SidebarWrapper isMenuOpen={isMenuOpen}>
+    <Profile isMobileHeader={false} />
+    <S.SidebarLinksWrapper>
+      <SocialLinks />
+      <MenuLinks setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+    </S.SidebarLinksWrapper>
   </S.SidebarWrapper>
 )
 

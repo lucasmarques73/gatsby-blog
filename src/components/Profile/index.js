@@ -5,7 +5,7 @@ import getThemeColor from "../../utils/getThemeColor"
 import * as S from "./styled"
 import Avatar from "../Avatar"
 
-const Profile = () => {
+const Profile = ({ isMobileHeader }) => {
   const {
     site: {
       siteMetadata: { title, position, description },
@@ -23,7 +23,7 @@ const Profile = () => {
   `)
 
   return (
-    <S.ProfileWrapper>
+    <S.ProfileWrapper isMobileHeader={isMobileHeader}>
       <S.ProfileLink
         to="/"
         cover

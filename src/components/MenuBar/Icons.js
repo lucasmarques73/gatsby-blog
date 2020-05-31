@@ -4,6 +4,7 @@ import { UpArrowAlt as Arrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb as Light } from "@styled-icons/entypo/LightBulb"
 import { ThList } from "@styled-icons/typicons/ThList"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
+import { Menu } from "@styled-icons/boxicons-regular/Menu"
 
 const Icons = {
   Home,
@@ -12,6 +13,7 @@ const Icons = {
   Light,
   ThList,
   Grid,
+  Menu,
 }
 
 export default Icons

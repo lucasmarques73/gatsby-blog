@@ -17,12 +17,20 @@ export const MenuBarWrapper = styled.aside`
 
   ${media.lessThan("large")`
     border-top: 1px solid var(--borders);
+    border-left: 0px;
     bottom: 0;
     flex-direction: row;
     height: auto;
     padding: 0;
     position: fixed;
     width: 100%;
+  `}
+`
+export const MenuBarGroupMobile = styled.div`
+  display: none;
+
+  ${media.lessThan("large")`
+    display: block;
   `}
 `
 
