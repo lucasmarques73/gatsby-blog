@@ -106,8 +106,8 @@ if (process.env.CONTEXT === "production") {
     },
   }
 
-  pluginConfig.push(algolia)
-  pluginConfig.push(analytics)
+  pluginsConfig.push(algolia)
+  pluginsConfig.push(analytics)
 }
 
 module.exports = {
