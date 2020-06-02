@@ -67,17 +67,6 @@ const pluginsConfig = [
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
   {
-    resolve: `gatsby-plugin-algolia-search`,
-    options: {
-      appId: process.env.GATSBY_ALGOLIA_APP_ID,
-      apiKey: process.env.ALGOLIA_ADMIN_KEY,
-      indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-      queries,
-      chunkSize: 10000,
-      enablePartialUpdates: true,
-    },
-  },
-  {
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Lucas Marques - Blog`,
@@ -94,14 +83,32 @@ const pluginsConfig = [
   // To learn more, visit: https://gatsby.dev/offline
   `gatsby-plugin-offline`,
   `gatsby-plugin-netlify-cms`,
-  {
+]
+
+if (process.env.CONTEXT === "production") {
+  const algolia = {
+    resolve: `gatsby-plugin-algolia-search`,
+    options: {
+      appId: process.env.GATSBY_ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_ADMIN_KEY,
+      indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+      queries,
+      chunkSize: 10000,
+      enablePartialUpdates: true,
+    },
+  }
+
+  const analytics = {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
       trackingId: process.env.GOOGLE_ANALYTICS_ID,
       head: false,
     },
-  },
-]
+  }
+
+  pluginConfig.push(algolia)
+  pluginConfig.push(analytics)
+}
 
 module.exports = {
   siteMetadata: {
