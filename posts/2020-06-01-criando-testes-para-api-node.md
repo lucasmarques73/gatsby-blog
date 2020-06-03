@@ -10,7 +10,7 @@ tags:
   - jest
   - supertest
 ---
-No post anterior, nós \[criamos uma api node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de api para ela.  \
+No post anterior, nós [criamos uma api node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de api para ela.  
 Antes de criar os testes, é bom nós entendermos o quê é testes de Api.  
 
 O teste de Api, consiste em simularmos chamadas em nossos endpoits, como nosso front-end faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa Api passe dados inválidos e todas as condições esperadas para esse endpoint.  
@@ -69,7 +69,7 @@ app.listen(process.env.PORT || port, () =>
 );
 ```
 Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e assim começamos a ter mais responsabilidade em nosso projeto.
-Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, e nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.  
+Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, mas nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.  
 E assim, vamos escrever testes para todas nossas rotas.
 
 
