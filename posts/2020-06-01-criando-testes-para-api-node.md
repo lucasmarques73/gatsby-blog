@@ -22,7 +22,7 @@ Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku
 
 Separamos ele em quatro arquivos.
 
-### app.js
+## app.js
 
 Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
 ```javascript
@@ -48,7 +48,7 @@ app.get("/users/:id", (req, res) => {
 
 module.exports = app;
 ```
-### users.js
+## users.js
 
  Atualmente os usuários são uma constante com um array de usuários.
 ```javascript
@@ -60,7 +60,7 @@ const users = [
 
 module.exports = users;
 ```
-### index.js
+## index.js
 
 Neste arquivo que nós importamos nosso app e rodamos nosso servidor.
 ```javascript
@@ -75,14 +75,18 @@ Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e as
 Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, mas nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.  
 E assim, vamos escrever testes para todas nossas rotas.
 
-### app.test.js
+## app.test.js
 
 Vou quebrar este arquivo para que a explicação possa ficar o mais claro possível.
 
-#### Imports corretos
+### Pacotes necessários
 
-Antes de mais nada, vamos importar nossa ferramenta que vai simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
-Outras importações, são o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
+Antes de mais nada, vamos instalar os pacotes necessários para testarmos nossos testes.  
+Neste projeto vamos utilizar o [jest](https://jestjs.io/) como nosso framework de testes. E para simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
+
+### Imports corretos
+
+Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
 
 ```javascript
 // we will use supertest to test HTTP requests/responses
@@ -91,8 +95,11 @@ const app = require("./app");
 
 const users = require("./users");
 
-
 ```
+Com tudo importado, podemos iniciar a escrever nossos testes para cada rota que nós temos, validando se as repostas recibidas são as respostas esperadas.
+
+#### Testando a rota "/"
+
 ```javascript
 describe("GET / ", () => {
   test("It should respond with an Ok", async () => {
