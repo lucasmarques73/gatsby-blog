@@ -22,9 +22,10 @@ Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku
 
 Separamos ele em quatro arquivos.
 
-**app.js** Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
+### app.js
+
+Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
 ```javascript
-// app.js
 const express = require("express");
 const app = express();
 
@@ -47,9 +48,10 @@ app.get("/users/:id", (req, res) => {
 
 module.exports = app;
 ```
-**users.js** Atualmente os usuários são uma constante com um array de usuários.
+### users.js
+
+ Atualmente os usuários são uma constante com um array de usuários.
 ```javascript
-// users.js
 const users = [
   { id: 1, name: "João" },
   { id: 2, name: "Mateus" },
@@ -58,9 +60,10 @@ const users = [
 
 module.exports = users;
 ```
-**index.js** Neste arquivo que nós importamos nosso app e rodamos nosso servidor.
+### index.js
+
+Neste arquivo que nós importamos nosso app e rodamos nosso servidor.
 ```javascript
-// index.js
 const app = require("./app");
 const port = 3000;
 
@@ -72,15 +75,25 @@ Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e as
 Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, mas nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.  
 E assim, vamos escrever testes para todas nossas rotas.
 
+### app.test.js
+
+Vou quebrar este arquivo para que a explicação possa ficar o mais claro possível.
+
+#### Imports corretos
+
+Antes de mais nada, vamos importar nossa ferramenta que vai simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
+Outras importações, são o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
 
 ```javascript
-// app.test.js
 // we will use supertest to test HTTP requests/responses
 const request = require("supertest");
 const app = require("./app");
 
 const users = require("./users");
 
+
+```
+```javascript
 describe("GET / ", () => {
   test("It should respond with an Ok", async () => {
     const response = await request(app).get("/");
