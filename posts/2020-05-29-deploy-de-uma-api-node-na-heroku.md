@@ -69,7 +69,7 @@ Para confirmar, basta acessarmos a url que foi criada para vermos a resposta da 
 ![Aplicação respondendo através da nossa api](/assets/img/api-ok.png "Aplicação respondendo através da nossa api")
 
 Com isso já temos pronto nosso servidor, servindo através de um servidor Node nossa api.\
-Uma coisa que gosto de fazer, é habilitar o deploy automárico. Com isso, sempre que nossa branch master tiver alterações, automaticamente vai ser feito deploy dela. Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
+Uma coisa que gosto de fazer, é habilitar o deploy automático. Com isso, sempre que nossa branch master tiver alterações, automaticamente vai ser feito deploy dela. Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
 
 Nos próximos posts pretendo explicar como podemos testar essa nossa api e após isso, fazer os testes serem executados sempre que alterarmos a master, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
 
