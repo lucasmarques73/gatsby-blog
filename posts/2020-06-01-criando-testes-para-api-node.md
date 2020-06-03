@@ -21,6 +21,8 @@ Agora que já explicamos algumas coisas, vamos para o código.
 Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku)
 
 Separamos ele em quatro arquivos.
+
+*app.js* Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id.
 ```javascript
 // app.js
 const express = require("express");
@@ -45,15 +47,9 @@ app.get("/users/:id", (req, res) => {
 
 module.exports = app;
 ```
+*users.js* Atualmente os usuários são uma constante com um array de usuários.
 ```javascript
-const app = require("./app");
-const port = 3000;
-
-app.listen(process.env.PORT || port, () =>
-  console.log(`Server running in ${port}`)
-);
-```
-```javascript
+// users.js
 const users = [
   { id: 1, name: "João" },
   { id: 2, name: "Mateus" },
@@ -61,6 +57,14 @@ const users = [
 ];
 
 module.exports = users;
+```
+```javascript
+const app = require("./app");
+const port = 3000;
+
+app.listen(process.env.PORT || port, () =>
+  console.log(`Server running in ${port}`)
+);
 ```
 ```javascript
 // we will use supertest to test HTTP requests/responses
