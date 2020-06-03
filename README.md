@@ -2,7 +2,7 @@
 
 # lucasmarques.dev
 
-This blog was created using Gatsby, based on the @willianjusten [course](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
+This blog was created using Gatsby, based on the [Willian Justen](https://twitter.com/Willian_justen) [course](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
 
 ## Main Technology
 
