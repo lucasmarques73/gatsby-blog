@@ -12,7 +12,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={page.title} image={page.image} />
+      <SEO title={page.title} />
       <S.PostHeader>
         <S.PostTitle>{page.title}</S.PostTitle>
       </S.PostHeader>
@@ -28,7 +28,6 @@ export const query = graphql`
     markdownRemark(frontmatter: { category: { eq: "sobre" } }) {
       frontmatter {
         title
-        category
       }
       html
     }
