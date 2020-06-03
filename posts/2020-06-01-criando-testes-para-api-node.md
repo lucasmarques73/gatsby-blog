@@ -22,7 +22,7 @@ Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku
 
 Separamos ele em quatro arquivos.
 
-*app.js* Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id.
+**app.js** Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
 ```javascript
 // app.js
 const express = require("express");
@@ -47,7 +47,7 @@ app.get("/users/:id", (req, res) => {
 
 module.exports = app;
 ```
-*users.js* Atualmente os usuários são uma constante com um array de usuários.
+**users.js** Atualmente os usuários são uma constante com um array de usuários.
 ```javascript
 // users.js
 const users = [
@@ -58,7 +58,9 @@ const users = [
 
 module.exports = users;
 ```
+**index.js** Neste arquivo que nós importamos nosso app e rodamos nosso servidor.
 ```javascript
+// index.js
 const app = require("./app");
 const port = 3000;
 
@@ -66,7 +68,13 @@ app.listen(process.env.PORT || port, () =>
   console.log(`Server running in ${port}`)
 );
 ```
+Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e assim começamos a ter mais responsabilidade em nosso projeto.
+Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, e nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.  
+E assim, vamos escrever testes para todas nossas rotas.
+
+
 ```javascript
+// app.test.js
 // we will use supertest to test HTTP requests/responses
 const request = require("supertest");
 const app = require("./app");
