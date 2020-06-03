@@ -12,3 +12,7 @@ This blog was created using Gatsby, based on the [Willian Justen](https://twitte
 - [Netlify](https://netlify.com/)
 - [Netlify CMS](https://netlifycms.org/)
 - [Github](https://github.com/)
+
+## License
+
+[GNU General Public License v3.0](https://github.com/lucasmarques73/lucasmarques.dev/blob/master/LICENSE)
