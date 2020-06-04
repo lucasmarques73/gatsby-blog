@@ -95,6 +95,23 @@ Para instalar esses pacotes.
 npm install --save-dev jest supertest
 ```
 
+### Explicando as funções usadas no arquivo de testes
+
+#### describe
+
+Utilizamos esta função para agrupar alguns casos de testes, podemos ver isso melhor pela frente.  
+Podemos também, dentro de um describe, preparar nossos cenários de testes, com mocks e algumas chamadas de métodos
+
+#### test
+
+Utilizamos esta função para agrupar a execução do método testado e a verificação dos dados esperados.
+
+#### expect
+
+Utilizamos esta função para comparar a resposta do método a ser testado com a resposta esperada.  
+Dentro do [jest](https://jestjs.io/) temos uma [variadade de possibilidades para comparação](https://jestjs.io/docs/en/using-matchers).
+
+
 ### Imports corretos
 
 Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
