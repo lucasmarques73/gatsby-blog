@@ -101,7 +101,7 @@ const app = require("./app");
 const users = require("./users");
 
 ```
-Com tudo importado, podemos iniciar a escrever nossos testes para cada rota que nós temos, validando se as repostas recibidas são as respostas esperadas.
+Com tudo importado, podemos começar a escrever nossos testes para cada rota que temos, validando se as repostas recibidas são as respostas esperadas.
 
 #### Testando a rota "/"
 
