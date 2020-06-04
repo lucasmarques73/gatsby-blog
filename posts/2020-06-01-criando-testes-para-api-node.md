@@ -110,6 +110,9 @@ Com tudo importado, podemos começar a escrever nossos testes para cada rota que
 
 #### Testando a rota "/"
 
+Essa é uma rota bem simples, que deve apenas devolver um **Ok** como texto.
+Por isso, nós simulamos a requisição para essa rota e com a resposta, nós verificamos se o texto é igual ao que esperamos e também, se veio com o status code correto.
+
 ```javascript
 describe("GET / ", () => {
   test("It should respond with an Ok", async () => {
@@ -121,6 +124,8 @@ describe("GET / ", () => {
 ```
 
 #### Testando a rota "/health"
+
+Similar ao exemplo anterior, temos que garantir que a resposta para a requisição é a esperada.
 
 ```javascript
 describe("GET /health ", () => {
