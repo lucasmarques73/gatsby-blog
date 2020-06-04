@@ -84,6 +84,11 @@ Vou quebrar este arquivo para que a explicação possa ficar o mais claro possí
 Antes de mais nada, vamos instalar os pacotes necessários para testarmos nossos testes.  
 Neste projeto vamos utilizar o [jest](https://jestjs.io/) como nosso framework de testes. E para simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
 
+Para instalar esses pacotes.
+```sh
+npm install --save-dev jest supertest
+```
+
 ### Imports corretos
 
 Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
@@ -109,6 +114,8 @@ describe("GET / ", () => {
   });
 });
 
+#### Testando a rota "/health"
+
 describe("GET /health ", () => {
   test("It should respond with an Healthy", async () => {
     const response = await request(app).get("/health");
@@ -117,6 +124,8 @@ describe("GET /health ", () => {
   });
 });
 
+#### Testando a rota "/users"
+
 describe("GET /users ", () => {
   test("It should respond with an array of users", async () => {
     const response = await request(app).get("/users");
@@ -124,6 +133,8 @@ describe("GET /users ", () => {
     expect(response.statusCode).toBe(200);
   });
 });
+
+#### Testando a rota "/users/:id"
 
 describe("GET /users/:id ", () => {
   const expectedUser = { id: 2, name: "Mateus" };
