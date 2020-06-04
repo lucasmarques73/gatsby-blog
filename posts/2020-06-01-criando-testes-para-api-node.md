@@ -113,9 +113,10 @@ describe("GET / ", () => {
     expect(response.statusCode).toBe(200);
   });
 });
+```
 
 #### Testando a rota "/health"
-
+```javascript
 describe("GET /health ", () => {
   test("It should respond with an Healthy", async () => {
     const response = await request(app).get("/health");
@@ -123,9 +124,9 @@ describe("GET /health ", () => {
     expect(response.statusCode).toBe(200);
   });
 });
-
+```
 #### Testando a rota "/users"
-
+```javascript
 describe("GET /users ", () => {
   test("It should respond with an array of users", async () => {
     const response = await request(app).get("/users");
@@ -133,9 +134,9 @@ describe("GET /users ", () => {
     expect(response.statusCode).toBe(200);
   });
 });
-
+```
 #### Testando a rota "/users/:id"
-
+```javascript
 describe("GET /users/:id ", () => {
   const expectedUser = { id: 2, name: "Mateus" };
 
