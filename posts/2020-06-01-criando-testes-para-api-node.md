@@ -30,9 +30,7 @@ Neste arquivo vai estar descrito nossas routas e cada método deve ser executado
 const express = require("express");
 const app = express();
 
-const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
+app.use(express.json());
 
 const users = require("./users");
 
@@ -155,6 +153,8 @@ describe("GET /health ", () => {
 ```
 
 #### Testando a rota "/users"
+
+
 
 ```javascript
 describe("GET /users ", () => {
