@@ -2,7 +2,7 @@
 type: post
 title: Criando testes para Api Node
 description: Nest post vou demonstrar como criar teste de Api para nossa Api Node
-date: 2020-06-08 03:57:46
+date: 2020-06-08T03:57:46.000Z
 image: /assets/img/npm-t-.png
 category: js
 tags:
@@ -14,7 +14,7 @@ tags:
 No post anterior, nós [criamos uma api node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de api para ela.\
 Antes de criar os testes, é bom nós entendermos o quê é testes de Api.  
 
-O teste de Api, consiste em simularmos chamadas em nossos endpoits, como nosso front-end faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa Api passe dados inválidos e todas as condições esperadas para esse endpoint.  
+O teste de Api, consiste em simularmos chamadas em nossos endpoints, como nosso front-end faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa Api passe dados inválidos e todas as condições esperadas para esse endpoint.  
 
 Por exemplo, temos uma rota que busca usuários por id. Devemos ter um teste para quando encontramos o usuário esperado, quando não encontramos o usuário, se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
 
@@ -25,7 +25,7 @@ Separamos ele em quatro arquivos.
 
 ## app.js
 
-Neste arquivo vai estar descrito nossas routas e cada método deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
+Neste arquivo vai estar descrito nossas rotas e cada método que deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
 
 ```javascript
 const express = require("express");
@@ -76,7 +76,7 @@ app.listen(process.env.PORT || port, () =>
 );
 ```
 
-Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e assim começamos a ter mais responsabilidade em nosso projeto. Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, mas nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.\
+Agora nossa aplicação está com mais recursos, foram adicionas mais rotas e assim começamos a ter mais responsabilidades em nosso projeto. Uma boa estratégia agora, é garantir que nosso código funciona. Garantir que quando eu peça um usuário de um determinado id, ele me devolva o usuário correto. Pode parecer simples, dado nossa implementação, mas nosso teste vai garantir que caso alguém altere a regra de como buscamos nossos usuários por id, ele ainda continue devolvendo o usuário correto.\
 E assim, vamos escrever testes para todas nossas rotas.
 
 ## app.test.js
@@ -85,7 +85,7 @@ Vou quebrar este arquivo para que a explicação possa ficar o mais claro possí
 
 ### Pacotes necessários
 
-Antes de mais nada, vamos instalar os pacotes necessários para testarmos nossos testes.\
+Antes de mais nada, vamos instalar os pacotes necessários para executarmos nossos testes.\
 Neste projeto vamos utilizar o [jest](https://jestjs.io/) como nosso framework de testes. E para simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
 
 Para instalar esses pacotes.
@@ -122,7 +122,7 @@ const app = require("./app");
 const users = require("./users");
 ```
 
-Com tudo importado, podemos começar a escrever nossos testes para cada rota que temos, validando se as repostas recibidas são as respostas esperadas.
+Com tudo importado, podemos começar a escrever nossos testes para cada rota que temos, validando se as repostas recebidas são as respostas esperadas.
 
 #### Testando a rota "/"
 
@@ -193,6 +193,8 @@ describe("GET /users/:id ", () => {
 ```
 
 Passamos por todos os testes do nosso projeto, entendemos como cada teste funciona e garantimos o funcionamento de todas as rotas.  
+
+
 Nos próximos passos, podemos aprofundar em nossos testes, utilizando mock para garantir como alguns objetos devem se comportar. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
