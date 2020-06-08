@@ -169,7 +169,9 @@ describe("GET /users ", () => {
 
 #### Testando a rota "/users/:id"
 
-Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.
+Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.  
+Temos dois casos de teste nesta rota, um caso quando encontramos o usuário esperado, onde nós sabemos qual usuário estamos procurando e sabemos o quê nossa api deve responder.  
+No outro caso, buscamos um id que, atualmente, sabemos ser inexistente em nossos usuários e a resposta deve ser apenas o status code de Não Encontrado.
 
 ```javascript
 describe("GET /users/:id ", () => {
