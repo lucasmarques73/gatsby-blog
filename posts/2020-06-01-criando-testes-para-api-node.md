@@ -190,3 +190,8 @@ describe("GET /users/:id ", () => {
   });
 });
 ```
+
+Passamos por todos os testes do nosso projeto, entendemos como cada teste funciona e garantimos o funcionamento de todas as rotas.  
+Nos próximos passos, podemos aprofundar em nossos testes, utilizando mock para garantir como alguns objetos devem se comportar. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.
+
+Valeu pessoas por terem lido até aqui. Até a próxima.
