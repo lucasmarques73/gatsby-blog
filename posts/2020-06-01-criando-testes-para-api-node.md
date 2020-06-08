@@ -2,7 +2,7 @@
 type: post
 title: Criando testes para Api Node
 description: Nest post vou demonstrar como criar teste de Api para nossa Api Node
-date: 2020-06-01T07:42:53.000Z
+date: 2020-06-08 02:57:08
 category: js
 tags:
   - testes
@@ -154,7 +154,8 @@ describe("GET /health ", () => {
 
 #### Testando a rota "/users"
 
-
+Esperamos dessa rota, que ela traga todos os usuários da nossa aplicação.  
+Com isso, simulamos a chamada na rota, comparamos o corpo da requisição com a lista de usuários que importamos, neste caso, são os mesmos valores, e verificamos também o status code correto.
 
 ```javascript
 describe("GET /users ", () => {
@@ -167,6 +168,8 @@ describe("GET /users ", () => {
 ```
 
 #### Testando a rota "/users/:id"
+
+Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.
 
 ```javascript
 describe("GET /users/:id ", () => {
