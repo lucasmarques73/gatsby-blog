@@ -1,7 +1,7 @@
 ---
 type: post
-title: Criando testes para Api Node
-description: Nest post vou demonstrar como criar testes de Api para nossa Api Node
+title: Criando testes para API Node
+description: Neste post vou demonstrar como criar testes para nossa API Node
 date: 2020-06-08T03:57:46.000Z
 image: /assets/img/npm-t-.png
 category: js
@@ -11,10 +11,10 @@ tags:
   - jest
   - supertest
 ---
-No post anterior, nós [criamos uma api node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de api para ela.\
-Antes de criar os testes, é bom nós entendermos o quê são testes de Api.  
+No post anterior, nós [criamos uma API Node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de API para ela.\
+Antes de tudo,  é bom entendermos do que se trata.  
 
-O teste de Api, consiste em simularmos chamadas em nossos endpoints, como nosso front-end faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa Api passe dados inválidos e todas as condições esperadas para esse caso.  
+O teste de API, consiste em simularmos chamadas em nossos endpoints, como nosso frontend faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e todas as condições esperadas para esse caso.  
 
 Por exemplo, temos uma rota que busca usuários por id. Devemos ter um teste para quando encontramos o usuário esperado, quando não encontramos o usuário, se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
 
@@ -114,7 +114,7 @@ module.exports = {
 * **clearMocks** quando utilizamos mocks (explicarei em um novo artigo) devemos limpar os mocks para que ele não atrapalhe o funcionamento de outros testes.
 * **coverageDirectory** utilizado para definir onde o jest vai colocar os arquivos de cobertura de código.
 * **coveragePathIgnorePatterns** Ignorar pastas quando gerarmos cobertura dos testes.
-* **testEnvironment** ambiente onde vai ser rodado os testes, no nosso caso, uma api node. Podendo ser um navegador como ambiente, caso seja uma aplicação frontend.
+* **testEnvironment** ambiente onde vai ser rodado os testes, no nosso caso, uma API Node. Podendo ser um navegador como ambiente, caso seja uma aplicação frontend.
 
 ### Explicando as funções usadas no arquivo de testes
 
@@ -134,7 +134,7 @@ Dentro do [jest](https://jestjs.io/) temos uma [variadade de possibilidades para
 
 ### Imports corretos
 
-Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da api com os dados que estão simulando nossa base de dados.
+Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da API com os dados que estão simulando nossa base de dados.
 
 ```javascript
 const request = require("supertest");
@@ -191,7 +191,7 @@ describe("GET /users ", () => {
 #### Testando a rota "/users/:id"
 
 Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.\
-Temos dois casos de teste nesta rota, um caso quando encontramos o usuário esperado, onde nós sabemos qual usuário estamos procurando e sabemos o quê nossa api deve responder.\
+Temos dois casos de teste nesta rota, um caso quando encontramos o usuário esperado, onde nós sabemos qual usuário estamos procurando e sabemos o quê nossa API deve responder.\
 No outro caso, buscamos um id que, atualmente, sabemos ser inexistente em nossos usuários e a resposta deve ser apenas o status code de Não Encontrado.
 
 ```javascript
