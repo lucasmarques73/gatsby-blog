@@ -113,7 +113,7 @@ module.exports = {
 
 #### describe
 
-Utilizamos esta função para agrupar alguns casos de testes, podemos ver isso melhor pela frente.\
+Utilizamos esta função para agrupar alguns casos de testes (veremos melhor issso à frente).\
 Podemos também, dentro de um describe, preparar nossos cenários de testes, com mocks e algumas chamadas de métodos
 
 #### test
