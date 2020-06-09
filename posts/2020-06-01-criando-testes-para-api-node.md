@@ -1,7 +1,7 @@
 ---
 type: post
 title: Criando testes para Api Node
-description: Nest post vou demonstrar como criar teste de Api para nossa Api Node
+description: Nest post vou demonstrar como criar testes de Api para nossa Api Node
 date: 2020-06-08T03:57:46.000Z
 image: /assets/img/npm-t-.png
 category: js
