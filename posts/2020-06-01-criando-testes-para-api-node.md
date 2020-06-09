@@ -68,7 +68,7 @@ module.exports = users;
 Aqui que nós importamos nosso app e rodamos nosso servidor.
 
 ```javascript
-const app = require("./app");
+const app = require("./src/app");
 const port = 3000;
 
 app.listen(process.env.PORT || port, () =>
@@ -127,7 +127,7 @@ Dentro do [jest](https://jestjs.io/) temos uma [variadade de possibilidades para
 
 ### Imports corretos
 
-Então vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da API com os dados que estão simulando nossa base de dados.
+Então vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários, para facilitar na hora de comparar os dados vindos da API com os dados que estão simulando nossa base de dados.
 
 ```javascript
 const request = require("supertest");
