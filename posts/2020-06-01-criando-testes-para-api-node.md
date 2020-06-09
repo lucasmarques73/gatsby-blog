@@ -12,7 +12,7 @@ tags:
   - supertest
 ---
 No post anterior, nós [criamos uma api node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de api para ela.\
-Antes de criar os testes, é bom nós entendermos o quê é testes de Api.  
+Antes de criar os testes, é bom nós entendermos o quê são testes de Api.  
 
 O teste de Api, consiste em simularmos chamadas em nossos endpoints, como nosso front-end faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa Api passe dados inválidos e todas as condições esperadas para esse endpoint.  
 
