@@ -96,7 +96,18 @@ npm install --save-dev jest supertest
 
 ### Configurando o Jest
 
-Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.
+Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.  
+Para este projeto, escolhemos poucas configurações básicas.  
+Essas configurações ficam dentro de **jest.config.js** na raíz do projeto.
+
+```javascript
+module.exports = {
+  clearMocks: true,
+  coverageDirectory: "coverage",
+  coveragePathIgnorePatterns: ["/node_modules/"],
+  testEnvironment: "node",
+};
+```
 
 ### Explicando as funções usadas no arquivo de testes
 
