@@ -14,7 +14,7 @@ tags:
 No post anterior, nós [criamos uma API Node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de API para ela.\
 Antes de tudo,  é bom entendermos do que se trata.  
 
-O teste de API consiste em simularmos chamadas em nossos endpoints, como nosso frontend faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e todas as condições esperadas para esse caso.  
+O teste de API consiste em simularmos chamadas em nossas rotas, como nosso frontend faria, e comparar o resultado que veio com o nosso resultado esperado. Se nossa rota se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e como nossa API deve se comportar.  
 
 Por exemplo, temos uma rota que busca usuários por id, neste caso, devemos ter um teste para quando encontramos o usuário esperado e quando não encontramos o usuário. Se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
 
@@ -96,24 +96,17 @@ npm install --save-dev jest supertest
 
 ### Configurando o Jest
 
-Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.\
-Para este projeto, escolhemos poucas configurações básicas.\
-Essas configurações ficam dentro de **jest.config.js** na raíz do projeto.
+Existem algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o framework na hora do teste.\
+Para este projeto, escolhemos configurações básicas. Essas configurações ficam dentro de **jest.config.js** na raíz do projeto.
 
 ```javascript
 module.exports = {
-  clearMocks: true,
-  coverageDirectory: "coverage",
-  coveragePathIgnorePatterns: ["/node_modules/"],
   testEnvironment: "node",
 };
 ```
 
 #### Entendendo o arquivo de configuração
 
-* **clearMocks** quando utilizamos mocks (explicarei em um novo artigo) devemos limpar os mocks para que ele não atrapalhe o funcionamento de outros testes.
-* **coverageDirectory** utilizado para definir onde o jest vai colocar os arquivos de cobertura de código.
-* **coveragePathIgnorePatterns** Ignorar pastas quando gerarmos cobertura dos testes.
 * **testEnvironment** ambiente onde vai ser rodado os testes, no nosso caso, uma API Node. Podendo ser um navegador como ambiente, caso seja uma aplicação frontend.
 
 ### Explicando as funções usadas no arquivo de testes
