@@ -168,8 +168,8 @@ describe("GET /health ", () => {
 
 #### Testando a rota "/users"
 
-Esperamos dessa rota, que ela traga todos os usuários da nossa aplicação.\
-Com isso, simulamos a chamada na rota, comparamos o corpo da requisição com a lista de usuários que importamos, neste caso, são os mesmos valores, e verificamos também o status code correto.
+Esperamos que rota traga todos os usuários da nossa aplicação.\
+Com isso, simulamos a chamada na rota, comparamos o corpo da requisição com a lista de usuários que importamos. Neste caso, são os mesmos valores, e verificamos também o status code correto.
 
 ```javascript
 describe("GET /users ", () => {
