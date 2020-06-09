@@ -96,8 +96,8 @@ npm install --save-dev jest supertest
 
 ### Configurando o Jest
 
-Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.  
-Para este projeto, escolhemos poucas configurações básicas.  
+Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.\
+Para este projeto, escolhemos poucas configurações básicas.\
 Essas configurações ficam dentro de **jest.config.js** na raíz do projeto.
 
 ```javascript
@@ -110,6 +110,7 @@ module.exports = {
 ```
 
 #### Entendendo o arquivo de configuração
+
 * **clearMocks** quando utilizamos mocks (explicarei em um novo artigo) devemos limpar os mocks para que ele não atrapalhe o funcionamento de outros testes.
 * **coverageDirectory** utilizado para definir onde o jest vai colocar os arquivos de cobertura de código.
 * **coveragePathIgnorePatterns** Ignorar pastas quando gerarmos cobertura dos testes.
@@ -119,7 +120,7 @@ module.exports = {
 
 #### describe
 
-Utilizamos esta função para agrupar alguns casos de testes, podemos ver isso melhor pela frente.  
+Utilizamos esta função para agrupar alguns casos de testes, podemos ver isso melhor pela frente.\
 Podemos também, dentro de um describe, preparar nossos cenários de testes, com mocks e algumas chamadas de métodos
 
 #### test
@@ -128,9 +129,8 @@ Utilizamos esta função para agrupar a execução do método testado e a verifi
 
 #### expect
 
-Utilizamos esta função para comparar a resposta do método a ser testado com a resposta esperada.  
+Utilizamos esta função para comparar a resposta do método a ser testado com a resposta esperada.\
 Dentro do [jest](https://jestjs.io/) temos uma [variadade de possibilidades para comparação](https://jestjs.io/docs/en/using-matchers).
-
 
 ### Imports corretos
 
@@ -147,8 +147,7 @@ Com tudo importado, podemos começar a escrever nossos testes para cada rota que
 
 #### Testando a rota "/"
 
-Essa é uma rota bem simples, que deve apenas devolver um **Ok** como texto.
-Por isso, nós simulamos a requisição para essa rota e com a resposta, nós verificamos se o texto é igual ao que esperamos e também, se veio com o status code correto.
+Essa é uma rota bem simples, que deve apenas devolver um **Ok** como texto. Por isso, nós simulamos a requisição para essa rota e com a resposta, nós verificamos se o texto é igual ao que esperamos e também, se veio com o status code correto.
 
 ```javascript
 describe("GET / ", () => {
@@ -176,7 +175,7 @@ describe("GET /health ", () => {
 
 #### Testando a rota "/users"
 
-Esperamos dessa rota, que ela traga todos os usuários da nossa aplicação.  
+Esperamos dessa rota, que ela traga todos os usuários da nossa aplicação.\
 Com isso, simulamos a chamada na rota, comparamos o corpo da requisição com a lista de usuários que importamos, neste caso, são os mesmos valores, e verificamos também o status code correto.
 
 ```javascript
@@ -191,8 +190,8 @@ describe("GET /users ", () => {
 
 #### Testando a rota "/users/:id"
 
-Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.  
-Temos dois casos de teste nesta rota, um caso quando encontramos o usuário esperado, onde nós sabemos qual usuário estamos procurando e sabemos o quê nossa api deve responder.  
+Esta é a rota onde temos uma regra de negócio, nela devemos trazer somente o usuário do **id** especificado.\
+Temos dois casos de teste nesta rota, um caso quando encontramos o usuário esperado, onde nós sabemos qual usuário estamos procurando e sabemos o quê nossa api deve responder.\
 No outro caso, buscamos um id que, atualmente, sabemos ser inexistente em nossos usuários e a resposta deve ser apenas o status code de Não Encontrado.
 
 ```javascript
@@ -215,9 +214,29 @@ describe("GET /users/:id ", () => {
 
 Passamos por todos os testes do nosso projeto, entendemos como cada teste funciona e garantimos o funcionamento de todas as rotas.  
 
+## Rodando os testes
 
-Nos próximos passos, podemos aprofundar em nossos testes, utilizando mock para garantir como alguns objetos devem se comportar. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.  
-Com isso, nossos testes vão funcionar de forma independente da camada que simula nossa base de dados.  
+Para isso, adicionamos uma nova chave no nosso package.json
+
+```json
+scripts": {
+    ...,
+    "test": "jest --watchAll"
+}
+```
+
+Rodando o novo script
+
+```shell
+npm test
+```
+
+Desta forma, nós podemos rodar os testes e a cada alteração nos arquivos, ele vai continuar rodando os testes exibindo no terminal o resultado.
+
+![Terminal exibindo resultado dos testes](/assets/img/npm-t-.png "Terminal exibindo resultado dos testes")
+
+Nos próximos passos, podemos aprofundar em nossos testes, utilizando mock para garantir como alguns objetos devem se comportar. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.\
+Com isso, nossos testes vão funcionar de forma independente da camada que simula nossa base de dados.\
 Futuramente podemos criar testes integrados a uma base de dados e trazer mais segurança no funcionamento de todo o projeto.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
