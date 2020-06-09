@@ -2,7 +2,7 @@
 type: post
 title: Deploy de uma API Node na Heroku
 description: Neste post vou mostrar de uma maneira simples, como colocar sua API
-  online na Heroku
+  Node online na Heroku
 date: 2020-05-29T07:13:18.000Z
 image: /assets/img/heroku-signup-screen.png
 category: js
@@ -18,7 +18,7 @@ Significa que ela oferece recursos como Servidores, Banco de dados, entre outros
 
 Bom, vamos lá.
 
-Como fazer o deploy de uma API NodeJS na heroku?
+Como fazer o deploy de uma API Node na heroku?
 
 Tenho no meu github, um [repositório](https://github.com/lucasmarques73/node-api-heroku) com uma API que contém apenas uma rota para exemplo.
 
@@ -36,12 +36,12 @@ app.listen(process.env.PORT || port, () =>
 );
 ```
 
-Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua api na porta **80**.\
+Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua API na porta **80**.\
 Para colocarmos ela online na heroku, o primeiro passo é [criar uma conta](https://signup.heroku.com/) na plataforma:
 
 ![Tela de cadastro na Heroku](/assets/img/heroku-signup-screen.png "Tela de cadastro na Heroku")
 
-Após o cadastro feito, nós temos que que criar uma nova aplicação dentro da plataforma. Esta aplicação que será nosso servidor que vai rodar nossa api.
+Após o cadastro feito, nós temos que que criar uma nova aplicação dentro da plataforma. Esta aplicação que será nosso servidor que vai rodar nossa API.
 
 ![Dashboard da Heroku, clicando para criar uma nova aplicação](/assets/img/new-app-heroku.png "Dashboard da Heroku, clicando para criar uma nova aplicação")
 
@@ -60,17 +60,17 @@ Clico no ícone do Github para conectar com ele, e pesquiso pelo meu repositóri
 
 ![Conectando aplicação Heroku com Github](/assets/img/heroku-choose-github-repo.png "Conectando aplicação Heroku com Github")
 
-Após escolher o repositório, a Heroku já vai fazer o deploy da branch **master** e nossa api já vai estar online.
+Após escolher o repositório, a Heroku já vai fazer o deploy da branch **master** e nossa API já vai estar online.
 
 ![Dashboard após conectar com repositório](/assets/img/app-after-conect-github.png "Dashboard após conectar com repositório")
 
-Para confirmar, basta acessarmos a url que foi criada para vermos a resposta da nossa api.
+Para confirmar, basta acessarmos a url que foi criada para vermos a resposta da nossa API.
 
-![Aplicação respondendo através da nossa api](/assets/img/api-ok.png "Aplicação respondendo através da nossa api")
+![Aplicação respondendo através da nossa API](/assets/img/api-ok.png "Aplicação respondendo através da nossa API")
 
-Com isso já temos pronto nosso servidor, servindo através de um servidor Node nossa api.\
+Com isso já temos pronto nosso servidor, servindo através de um servidor Node nossa API.\
 Uma coisa que gosto de fazer, é habilitar o deploy automático. Com isso, sempre que nossa branch master tiver alterações, automaticamente vai ser feito deploy dela. Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
 
-Nos próximos posts pretendo explicar como podemos testar essa nossa api e após isso, fazer os testes serem executados sempre que alterarmos a master, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
+Nos próximos posts pretendo explicar como podemos testar essa nossa API e após isso, fazer os testes serem executados sempre que alterarmos a master, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
