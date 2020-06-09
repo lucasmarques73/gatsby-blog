@@ -14,9 +14,9 @@ tags:
 No post anterior, nós [criamos uma API Node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de API para ela.\
 Antes de tudo,  é bom entendermos do que se trata.  
 
-O teste de API, consiste em simularmos chamadas em nossos endpoints, como nosso frontend faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e todas as condições esperadas para esse caso.  
+O teste de API consiste em simularmos chamadas em nossos endpoints, como nosso frontend faria, e comparar o resultado que veio, com o nosso resultado esperado. Se nosso endpoint se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e todas as condições esperadas para esse caso.  
 
-Por exemplo, temos uma rota que busca usuários por id. Devemos ter um teste para quando encontramos o usuário esperado, quando não encontramos o usuário, se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
+Por exemplo, temos uma rota que busca usuários por id, neste caso, devemos ter um teste para quando encontramos o usuário esperado e quando não encontramos o usuário. Se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
 
 Agora que já explicamos algumas coisas, vamos para o código.\
 Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku).
@@ -25,7 +25,7 @@ Separamos ele em quatro arquivos.
 
 ## app.js
 
-Neste arquivo vai estar descrito nossas rotas e cada método que deve ser executado para cada uma. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante, não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
+Neste arquivo vai estar descrito nossas rotas e cada método que deve ser executado para cada uma dessas rotas. Repare que temos uma rota que busca todos os usuários e uma que busca usuários por id. Outro detalhe importante é não iniciamos nosso servidor neste arquivo, exportamos nosso app para podermos testar ele.
 
 ```javascript
 const express = require("express");
@@ -65,7 +65,7 @@ module.exports = users;
 
 ## index.js
 
-Neste arquivo que nós importamos nosso app e rodamos nosso servidor.
+Aqui que nós importamos nosso app e rodamos nosso servidor.
 
 ```javascript
 const app = require("./app");
@@ -81,14 +81,14 @@ E assim, vamos escrever testes para todas nossas rotas.
 
 ## app.test.js
 
-Vou quebrar este arquivo para que a explicação possa ficar o mais claro possível.
+Vou quebrar este arquivo para que a explicação possa ficar o mais clara possível.
 
 ### Pacotes necessários
 
 Antes de mais nada, vamos instalar os pacotes necessários para executarmos nossos testes.\
-Neste projeto vamos utilizar o [jest](https://jestjs.io/) como nosso framework de testes. E para simular as requesições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
+Neste projeto vamos utilizar o [jest](https://jestjs.io/) como nosso framework de testes. E para simular as requisições em nosso projeto. O pacote [supertest](https://www.npmjs.com/package/supertest) foi utilizado.
 
-Para instalar esses pacotes.
+Para instalar os pacotes rode em seu terminal o seguinte comando:
 
 ```shell
 npm install --save-dev jest supertest
