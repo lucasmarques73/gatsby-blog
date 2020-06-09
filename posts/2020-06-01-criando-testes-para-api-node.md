@@ -210,7 +210,7 @@ Passamos por todos os testes do nosso projeto, entendemos como cada teste funcio
 
 ## Rodando os testes
 
-Para isso, adicionamos uma nova chave no nosso package.json
+Para isso, adicionamos uma nova chave no nosso package.json:
 
 ```json
 scripts": {
@@ -219,13 +219,13 @@ scripts": {
 }
 ```
 
-Rodando o novo script
+Rodando o novo script:
 
 ```shell
 npm test
 ```
 
-Desta forma, nós podemos rodar os testes e a cada alteração nos arquivos, ele vai continuar rodando os testes exibindo no terminal o resultado.
+Desta forma, nós podemos rodar os testes e, a cada alteração nos arquivos ele vai continuar rodando os testes e exibindo o resultado no terminal.
 
 ![Terminal exibindo resultado dos testes](/assets/img/npm-t-.png "Terminal exibindo resultado dos testes")
 
