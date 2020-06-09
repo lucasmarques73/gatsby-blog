@@ -11,7 +11,7 @@ tags:
   - jest
   - supertest
 ---
-No post anterior, nós [criamos uma API Node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de API para ela.\
+No post anterior nós [criamos uma API Node e colocamos ela online na Heroku](https://lucasmarques.dev/deploy-de-uma-api-node-na-heroku/). Agora, vou demonstrar como podemos fazer testes de API para ela.\
 Antes de tudo,  é bom entendermos do que se trata.  
 
 O teste de API consiste em simularmos chamadas em nossas rotas, como nosso frontend faria, e comparar o resultado que veio com o nosso resultado esperado. Se nossa rota se comporta como esperado, o teste vai passar. Devemos também, testar cenários onde quem consome nossa API passe dados inválidos e como nossa API deve se comportar.  
@@ -114,7 +114,7 @@ module.exports = {
 #### describe
 
 Utilizamos esta função para agrupar alguns casos de testes (veremos melhor issso à frente).\
-Podemos também, dentro de um describe, preparar nossos cenários de testes, com mocks e algumas chamadas de métodos
+Podemos também, dentro de um describe, preparar nossos cenários de testes, com mocks e algumas chamadas de métodos.
 
 #### test
 
@@ -127,7 +127,7 @@ Dentro do [jest](https://jestjs.io/) temos uma [variadade de possibilidades para
 
 ### Imports corretos
 
-Então, vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da API com os dados que estão simulando nossa base de dados.
+Então vamos importar o pacote dos testes, o nosso app propriamente dito e nossos usuários para facilitar na hora de comparar os dados vindos da API com os dados que estão simulando nossa base de dados.
 
 ```javascript
 const request = require("supertest");
