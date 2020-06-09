@@ -94,6 +94,10 @@ Para instalar esses pacotes.
 npm install --save-dev jest supertest
 ```
 
+### Configurando o Jest
+
+Podemos ter algumas [configurações](https://jestjs.io/docs/pt-BR/configuration) para o jest na hora do teste.
+
 ### Explicando as funções usadas no arquivo de testes
 
 #### describe
