@@ -109,6 +109,12 @@ module.exports = {
 };
 ```
 
+#### Entendendo o arquivo de configuração
+* **clearMocks** quando utilizamos mocks (explicarei em um novo artigo) devemos limpar os mocks para que ele não atrapalhe o funcionamento de outros testes.
+* **coverageDirectory** utilizado para definir onde o jest vai colocar os arquivos de cobertura de código.
+* **coveragePathIgnorePatterns** Ignorar pastas quando gerarmos cobertura dos testes.
+* **testEnvironment** ambiente onde vai ser rodado os testes, no nosso caso, uma api node. Podendo ser um navegador como ambiente, caso seja uma aplicação frontend.
+
 ### Explicando as funções usadas no arquivo de testes
 
 #### describe
