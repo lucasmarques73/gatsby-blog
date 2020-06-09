@@ -229,8 +229,8 @@ Desta forma, nós podemos rodar os testes e, a cada alteração nos arquivos ele
 
 ![Terminal exibindo resultado dos testes](/assets/img/npm-t-.png "Terminal exibindo resultado dos testes")
 
-Nos próximos passos, podemos aprofundar em nossos testes, utilizando mock para garantir como alguns objetos devem se comportar. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.\
+Nos próximos passos, podemos aprofundar em nossos testes utilizando mock para garantir o comportamento de alguns objetos. Esta é uma boa técnica pois atualmente nós dependemos do nosso conhecimento sobre o arquivo que contém os usuários, caso ele altere, nós também teríamos que corrigir nosso teste. A ideia é removermos essa dependência utilizando mocks.\
 Com isso, nossos testes vão funcionar de forma independente da camada que simula nossa base de dados.\
-Futuramente podemos criar testes integrados a uma base de dados e trazer mais segurança no funcionamento de todo o projeto.
+Futuramente, podemos criar testes integrados a uma base de dados e trazer mais segurança no funcionamento de todo o projeto.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
