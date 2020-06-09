@@ -19,7 +19,7 @@ O teste de Api, consiste em simularmos chamadas em nossos endpoints, como nosso 
 Por exemplo, temos uma rota que busca usuários por id. Devemos ter um teste para quando encontramos o usuário esperado, quando não encontramos o usuário, se há validações do id, devemos ter um teste onde passamos um id inválido e ele retorne a resposta esperada.
 
 Agora que já explicamos algumas coisas, vamos para o código.\
-Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku)
+Este projeto está no [github](https://github.com/lucasmarques73/node-api-heroku).
 
 Separamos ele em quatro arquivos.
 
