@@ -15,3 +15,9 @@ tags:
   - ""
 ---
 No post anterior nós \[criamos testes para nossa API Node](https://lucasmarques.dev/criando-testes-para-api-node/) mas ainda é possível alterar o código atual, quebrando alguns testes e subir esse código para produção pois não é um requisito rodar os testes antes de subir qualquer coisa.
+
+A ideia neste post é proteger nossa branch master de receber commits diretamente, isso significa que ela só vai receber código através de \*\*pull request\*\*. Mas isso ainda não é suficiente, dado que podemos abrir um PR sem rodar os testes e ainda sim colocar código quebrado em produção.  
+
+Então, como podemos melhorar essa segurança, garantindo que o código que vai entrar, pelo menos não está quebrando o código já existente?  
+
+A resposta, neste caso, é com \[Github Actions](https://github.com/features/actions). Com essa ferramenta, junto com algumas configurações no Github
