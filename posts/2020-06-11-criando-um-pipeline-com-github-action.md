@@ -20,4 +20,6 @@ A ideia neste post é proteger nossa branch master de receber commits diretament
 
 Então, como podemos melhorar essa segurança, garantindo que o código que vai entrar, pelo menos não está quebrando o código já existente?  
 
-A resposta, neste caso, é com \[Github Actions](https://github.com/features/actions). Com essa ferramenta, junto com algumas configurações no Github
+A resposta, neste caso, é com \[Github Actions](https://github.com/features/actions). Com essa ferramenta, junto com algumas configurações no Github, vamos rodar todos nossos testes para cada PR aberto e caso algum teste falhe, ele não vai permitir este novo código.  
+
+Outras coisas que faremos, é utilizar o \[Coveralls](https://coveralls.io/) para termos um relatório de cobertura do código, ele vai nos trazer, por exemplo, a porcentagem de código que está coberta por testes, e podemos utilizar essa métrica para aceitar ou não um PR.
