@@ -15,4 +15,4 @@ This blog was created using Gatsby, based on the [Willian Justen](https://twitte
 
 ## License
 
-[GNU General Public License v3.0](https://github.com/lucasmarques73/lucasmarques.dev/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/lucasmarques73/lucasmarques.dev/blob/main/LICENSE)

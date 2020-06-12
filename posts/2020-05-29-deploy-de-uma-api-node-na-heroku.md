@@ -10,6 +10,7 @@ tags:
   - js
   - heroku
 ---
+
 Antes de começar, gostaria de explicar um pouco sobre a [Heroku](https://www.heroku.com/).
 
 Segundo o [Wikipedia](https://en.wikipedia.org/wiki/Heroku), A Heroku é uma plataforma de nuvem como serviço, suportando diversas linguagens de programação. O que isso significa??
@@ -25,15 +26,15 @@ Tenho no meu github, um [repositório](https://github.com/lucasmarques73/node-ap
 Este é o código da nossa API:
 
 ```javascript
-const express = require("express");
-const app = express();
-const port = 3000;
+const express = require("express")
+const app = express()
+const port = 3000
 
-app.get("/", (_, res) => res.send("OK"));
+app.get("/", (_, res) => res.send("OK"))
 
 app.listen(process.env.PORT || port, () =>
   console.log(`Server running in ${port}`)
-);
+)
 ```
 
 Um ponto importante para o deploy na heroku, é a utilização correta da variável de ambiente **PORT**, pois com ela que a Heroku disponibiliza sua API na porta **80**.\
@@ -60,7 +61,7 @@ Clico no ícone do Github para conectar com ele, e pesquiso pelo meu repositóri
 
 ![Conectando aplicação Heroku com Github](/assets/img/heroku-choose-github-repo.png "Conectando aplicação Heroku com Github")
 
-Após escolher o repositório, a Heroku já vai fazer o deploy da branch **master** e nossa API já vai estar online.
+Após escolher o repositório, a Heroku já vai fazer o deploy da branch **main** e nossa API já vai estar online.
 
 ![Dashboard após conectar com repositório](/assets/img/app-after-conect-github.png "Dashboard após conectar com repositório")
 
@@ -69,8 +70,8 @@ Para confirmar, basta acessarmos a url que foi criada para vermos a resposta da 
 ![Aplicação respondendo através da nossa API](/assets/img/api-ok.png "Aplicação respondendo através da nossa API")
 
 Com isso já temos pronto nosso servidor, servindo através de um servidor Node nossa API.\
-Uma coisa que gosto de fazer, é habilitar o deploy automático. Com isso, sempre que nossa branch master tiver alterações, automaticamente vai ser feito deploy dela. Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
+Uma coisa que gosto de fazer, é habilitar o deploy automático. Com isso, sempre que nossa branch main tiver alterações, automaticamente vai ser feito deploy dela. Um ponto importante sobre isso, é que ainda não temos uma esteira de build, ou seja, ele não vai rodar testes ou qualquer coisa para saber se nossa branch realmente pode entrar em produção.
 
-Nos próximos posts pretendo explicar como podemos testar essa nossa API e após isso, fazer os testes serem executados sempre que alterarmos a master, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
+Nos próximos posts pretendo explicar como podemos testar essa nossa API e após isso, fazer os testes serem executados sempre que alterarmos a main, e caso um teste falhe, ele não altere o código de produção, assim, somente com testes passando vamos colocar algo novo em produção.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
