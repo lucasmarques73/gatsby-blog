@@ -1,6 +1,6 @@
 ---
 type: post
-title: Alterando sua branch principal
+title: Alterando o nome de sua branch principal
 description: Após uma sugestão de @Una no twitter, resolvi trocar o nome da
   branch principal nos meus projetos.
 date: 2020-06-12T04:12:59.000Z
