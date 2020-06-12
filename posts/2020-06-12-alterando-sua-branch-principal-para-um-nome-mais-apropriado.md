@@ -35,3 +35,25 @@ Após criar a nova branch, precisamos subir ela para nosso repositório, no caso
 ```shell
 git push -u origin HEAD
 ```
+
+## Alterando a configuração no github
+
+Já no github, dentro do meu repositório, fui até a aba de configurações e no menu lateral esquerdo, selecionei a opção **Branches**.
+
+![Configurações de branches do github](/assets/img/github-settings-branch.png "Configurações de branches do github")
+
+Agora temos a opção de alterar a nossa branch principal, após escolher o nome da nova branch, é só clicar no botão **Update** e já está feito.
+
+## Removendo a branch antiga
+
+Para finalizar, vamos apagar a branch antiga pois ela não é mais necessária em nosso projeto. Para isso, voltei a página do meu repositório. Cliquei na opção onde é mostrado todas as branchs do projeto.
+
+![Selecionando a opção branches no github](/assets/img/repo-options.png "Selecionando a opção branches no github")
+
+Agora com a listagem de todas as branchs do projeto, é só clicar na lixeira para excluir a branch antiga.
+
+![Excluindo branch antiga.](/assets/img/selected-trash-to-branch.png "Excluindo branch antiga.")
+
+Com isso, finalizamos nossa alteração de branch principal em nosso repositório no github.
+
+Valeu pessoas por terem lido até aqui. Até a próxima.
