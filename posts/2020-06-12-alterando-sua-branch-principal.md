@@ -21,7 +21,7 @@ Eu gostei muito da ideia e aderi aos meus projetos. Neste post vou demonstrar co
 
 ## Alterando a branch no repositório local
 
-Para isso, eu resolvi mover a branch **master** para a nova branch que vamos chamar de **main** como sugestão da [@Una](https://twitter.com/Una).
+Para isso, eu resolvi mover a branch **master** para a nova branch que vamos chamar de **main**, como sugestão da [@Una](https://twitter.com/Una).
 
 ```shel
 git branch -m master main
@@ -31,7 +31,7 @@ Desta forma, eu já crio uma nova branch localmente e vou para ela. Esta nova br
 
 ## Subindo a nova branch
 
-Após criar a nova branch, precisamos subir ela para nosso repositório, no caso o github.
+Após criar a nova branch, precisamos subir ela para nosso repositório,que em nosso caso é o github.
 
 ```shell
 git push -u origin HEAD
@@ -43,7 +43,7 @@ Já no github, dentro do meu repositório, fui até a aba de configurações e n
 
 ![Configurações de branches do github](/assets/img/github-settings-branch.png "Configurações de branches do github")
 
-Agora temos a opção de alterar a nossa branch principal, após escolher o nome da nova branch, é só clicar no botão **Update** e já está feito.
+Agora temos a opção de alterar a nossa branch principal. Após escolher o nome da nova branch, é só clicar no botão **Update** e já está feito.
 
 ## Removendo a branch antiga
 
@@ -55,6 +55,8 @@ Agora com a listagem de todas as branchs do projeto, é só clicar na lixeira pa
 
 ![Excluindo branch antiga.](/assets/img/selected-trash-to-branch.png "Excluindo branch antiga.")
 
-Com isso, finalizamos nossa alteração de branch principal em nosso repositório no github.
+Com isso, finalizamos nossa alteração de branch principal em nosso repositório no github. E deixamos de ter uma referência ao trabalho escravo em nosso projeto.  
+
+Deixo aqui um [Link](https://revistaglamour.globo.com/Lifestyle/noticia/2019/04/17-palavras-e-expressoes-racistas-que-ninguem-deveria-usar-mais.html) com algumas palavras e expressões que nós deveríamos parar de utilizar relacionadas ao racismo.
 
 Valeu pessoas por terem lido até aqui. Até a próxima.
