@@ -29,7 +29,7 @@ collections:
           label: "Category",
           name: "category",
           widget: "select",
-          options: ["js", "php", "go", "Dev", "react", "devops", "misc"],
+          options: ["js", "php", "go", "dev", "react", "devops", "misc"],
         }
       - {
           label: "Tags",
