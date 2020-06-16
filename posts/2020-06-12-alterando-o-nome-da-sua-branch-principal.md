@@ -3,7 +3,7 @@ type: post
 title: Alterando o nome de sua branch principal
 description: Após uma sugestão de @Una no twitter, resolvi trocar o nome da
   branch principal nos meus projetos.
-date: 2020-06-12T04:12:59.000Z
+date: 2020-06-16 07:25:24
 image: /assets/img/una-twitter.png
 category: dev
 tags:
