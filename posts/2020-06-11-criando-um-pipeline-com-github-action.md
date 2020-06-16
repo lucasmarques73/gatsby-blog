@@ -30,4 +30,11 @@ Para nós, ele vai automatizar a execução dos testes.
 
 ## Começando com Github Actions
 
-O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline deve executar, 
+O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline deve executar, dentro dele podemos ter alguns passos com integrações, como por exemplo, a integração com o Coveralls. 
+
+O arquivo deve estar dentro de uma estrutura específica para que o github saiba ler este arquivo.
+
+Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**.
+O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
+
+## Explicando o arquivo em partes
