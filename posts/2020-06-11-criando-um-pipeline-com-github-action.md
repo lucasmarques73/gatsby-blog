@@ -25,7 +25,7 @@ Outras coisas que faremos, é utilizar o [Coveralls](https://coveralls.io/) para
 
 ## O que é com o Github Actions?
 
-Como a própria definição diz, é um automatizador de tarefas para colocar sua ideia em produção.  
+Como a própria definição diz, é um automatizador de tarefas para colocar sua ideia em produção.\
 Para nós, ele vai automatizar a execução dos testes.
 
 ## Começando com Github Actions
@@ -34,8 +34,16 @@ O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo 
 
 O arquivo deve estar dentro de uma estrutura específica para que o github saiba ler este arquivo.
 
-Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**.
-O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
+Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
 
 ## Explicando o arquivo em partes
 
+A primeira parte do arquivo, nós colocamos o nome da **Action** que estamos criando.
+
+```yml
+name:Tests
+```
+
+Na aba **Actions** no Github, vai ficar da seguinte forma.
+
+![Exibindo a Aba de Actions no Github](/assets/img/action-name.png "Exibindo a Aba de Actions no Github")
