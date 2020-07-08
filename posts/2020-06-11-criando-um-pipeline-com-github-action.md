@@ -38,3 +38,4 @@ Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**.
 O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
 
 ## Explicando o arquivo em partes
+
