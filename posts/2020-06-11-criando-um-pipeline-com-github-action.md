@@ -38,6 +38,7 @@ Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arqu
 
 ## Explicando o arquivo em partes
 
+### name
 A primeira parte do arquivo, nós colocamos o nome da **Action** que estamos criando.
 
 ```yml
@@ -48,6 +49,7 @@ Na aba **Actions** no Github, vai ficar da seguinte forma.
 
 ![Exibindo a Aba de Actions no Github](/assets/img/action-name.png "Exibindo a Aba de Actions no Github")
 
+### on
 Seguindo no arquivo, temos a configuração de quando queremos que esta **Action** seja executada.
 ```yml
 on:
@@ -57,4 +59,6 @@ on:
     branches:
       - main
 ```
-Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, atualizado ou reaberto. E sempre que houver um **push** na nossa branch **main**
+Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, atualizado ou reaberto. E sempre que houver um **push** na nossa branch **main**.
+
+### jobs
