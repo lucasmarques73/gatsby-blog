@@ -47,3 +47,14 @@ name:Tests
 Na aba **Actions** no Github, vai ficar da seguinte forma.
 
 ![Exibindo a Aba de Actions no Github](/assets/img/action-name.png "Exibindo a Aba de Actions no Github")
+
+Seguindo no arquivo, temos a configuração de quando queremos que esta **Action** seja executada.
+```yml
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+```
+Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, atualizado ou reaberto. E sempre que houver um **push** na nossa branch **main**
