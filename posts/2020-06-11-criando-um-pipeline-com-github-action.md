@@ -70,5 +70,38 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-   # Vamos descrever cada passo de forma detalhada.
+   # Vamos descrever cada passo de forma de
+talhada.
 ```
+#### step 1 - Checkout
+
+A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já temos um pacote do próprio **Github** que faz isso.
+```yml
+- name: Checkout Repository
+        uses: actions/checkout@v2
+```
+#### step 2 - Setup NodeJS
+No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
+```yml
+- name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+```
+Também temos um pacote pra isso, e também definimos qual a versão do **NodeJS** vamos utilizar.
+
+#### step 3 - Prepare Cache
+Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que instalarmos, o processo será mais rápido pois não vai baixar denovo.
+```yml
+- name: Prepare cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+```
+
+#### step 4 - Install Dependencies
+Com tudo preparado, vamos instalar as dependências do nosso projeto.  
+Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele é similar ao anterior, mas é recomendado para processo automáticos, mais [infos](https://docs.npmjs.com/cli/ci.html)
