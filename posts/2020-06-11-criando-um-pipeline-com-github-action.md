@@ -4,7 +4,7 @@ title: Criando um pipeline com Github Action
 description: Nest post vou demonstrar como criar um pipeline com Github Action
   para nossa API Node, protegendo nossa branch master e fazer com que os nossos
   testes de API rodem dentro dela gerando relatório de cobertura do código.
-date: 2020-07-08 05:31:28
+date: 2020-07-08T05:31:28.000Z
 category: devops
 tags:
   - github
@@ -62,3 +62,4 @@ on:
 Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, atualizado ou reaberto. E sempre que houver um **push** na nossa branch **main**.
 
 ### jobs
+
