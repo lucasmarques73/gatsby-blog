@@ -124,3 +124,35 @@ Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele �
 - name: Install dependencies
         run: npm ci
 ```
+
+#### step 5 - Run tests
+
+Após instalar todas as dependências, vamos rodar nossos testes.
+
+```yaml
+- name: Run tests
+        run: npm run test:ci
+```
+
+Neste passo, nós rodamos o comando `npm run test:ci` pois configuramos ele para gerar relatórios de cobertura do nosso código.\
+Ele foi criando em nosso `package.json`.
+
+```shell
+jest --ci --coverage --coverageReporters=html --coverageReporters=lcov
+```
+
+Com esses atributos sendo passado para o **jest**, ele vai gerar um relatório de cobertura que podemos analisar posteriormente.\
+Outra configuração que fizemos, nós adicionamos em nosso **jest.config.js** as seguintes informações.
+
+```javascript
+module.exports = {
+  clearMocks: true,
+  coverageDirectory: "coverage",
+  coveragePathIgnorePatterns: ["/node_modules/"],
+  testEnvironment: "node",
+};
+```
+* **clearMocks** quando utilizamos mocks (explicarei em um novo artigo) devemos limpar os mocks para que ele não atrapalhe o funcionamento de outros testes.
+* **coverageDirectory** utilizado para definir onde o jest vai colocar os arquivos de cobertura de código.
+* **coveragePathIgnorePatterns** Ignorar pastas quando gerarmos cobertura dos testes.
+
