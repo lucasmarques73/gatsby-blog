@@ -63,3 +63,12 @@ Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, 
 
 ### jobs
 
+Atualmente temos apenas um **job** que vamos chamar de **tests**. A ideia é que ele faça o necessário para rodar os testes em todos os caso que colocamos anteriormente.  
+Dentro do nosso **job** nós definimos em qual ambiente ele vai executar e os passos que ele deve seguir.
+```yml
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+   # Vamos descrever cada passo de forma detalhada.
+```
