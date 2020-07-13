@@ -39,9 +39,10 @@ Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arqu
 ## Explicando o arquivo em partes
 
 ### name
+
 A primeira parte do arquivo, nós colocamos o nome da **Action** que estamos criando.
 
-```yml
+```yaml
 name:Tests
 ```
 
@@ -50,8 +51,10 @@ Na aba **Actions** no Github, vai ficar da seguinte forma.
 ![Exibindo a Aba de Actions no Github](/assets/img/action-name.png "Exibindo a Aba de Actions no Github")
 
 ### on
+
 Seguindo no arquivo, temos a configuração de quando queremos que esta **Action** seja executada.
-```yml
+
+```yaml
 on:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -59,13 +62,15 @@ on:
     branches:
       - main
 ```
+
 Em nosso caso, ela vai ser executada sempre que um **Pull Request** for aberto, atualizado ou reaberto. E sempre que houver um **push** na nossa branch **main**.
 
 ### jobs
 
-Atualmente temos apenas um **job** que vamos chamar de **tests**. A ideia é que ele faça o necessário para rodar os testes em todos os caso que colocamos anteriormente.  
+Atualmente temos apenas um **job** que vamos chamar de **tests**. A ideia é que ele faça o necessário para rodar os testes em todos os caso que colocamos anteriormente.\
 Dentro do nosso **job** nós definimos em qual ambiente ele vai executar e os passos que ele deve seguir.
-```yml
+
+```yaml
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -73,26 +78,34 @@ jobs:
    # Vamos descrever cada passo de forma de
 talhada.
 ```
+
 #### step 1 - Checkout
 
 A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já temos um pacote do próprio **Github** que faz isso.
-```yml
+
+```yaml
 - name: Checkout Repository
         uses: actions/checkout@v2
 ```
+
 #### step 2 - Setup NodeJS
+
 No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
-```yml
+
+```yaml
 - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
 ```
+
 Também temos um pacote pra isso, e também definimos qual a versão do **NodeJS** vamos utilizar.
 
 #### step 3 - Prepare Cache
+
 Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que instalarmos, o processo será mais rápido pois não vai baixar denovo.
-```yml
+
+```yaml
 - name: Prepare cache
         uses: actions/cache@v2
         with:
@@ -103,5 +116,11 @@ Este passo é uma boa prática quando criamos esteiras de integreção contínua
 ```
 
 #### step 4 - Install Dependencies
-Com tudo preparado, vamos instalar as dependências do nosso projeto.  
-Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele é similar ao anterior, mas é recomendado para processo automáticos, mais [infos](https://docs.npmjs.com/cli/ci.html)
+
+Com tudo preparado, vamos instalar as dependências do nosso projeto.\
+Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele é similar ao anterior, mas é recomendado para processo automatizados, mais [infos](https://docs.npmjs.com/cli/ci.html).
+
+```yaml
+- name: Install dependencies
+        run: npm ci
+```
