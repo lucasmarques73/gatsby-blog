@@ -132,12 +132,14 @@ Após instalar todas as dependências, vamos rodar nossos testes.
 - name: Run tests
         run: npm run test:ci
 ```
-Neste passo, nós rodamos o comando `npm run test:ci` pois configuramos ele para gerar relatórios de cobertura do nosso código.\
+Neste passo, nós rodamos o comando `npm run test:ci`, ele vai rodar os testes entendo que está em um ambiente de **CI** e caso algum teste falhe, ele aborta a etapa.\
 Ele foi criando em nosso `package.json`.
 
 ```shell
 jest --ci
 ```
 
-
+Com isso finalizamos o arquivo do nosso primeiro pipeline.  
+Ao fazer o commit do código e subir para o Github, ele já vai ler o arquivo e executar nosso pipeline.  
+Podemos ver os passos sendo executados dentro da aba **Actions** no Github.
 
