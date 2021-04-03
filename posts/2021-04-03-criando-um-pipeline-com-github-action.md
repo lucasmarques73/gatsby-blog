@@ -87,3 +87,57 @@ A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já 
 - name: Checkout Repository
   uses: actions/checkout@v2
 ```
+
+#### step 2 - Setup NodeJS
+
+No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
+
+```yaml
+- name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+```
+
+Também temos uma **action** pra isso, e também definimos qual a versão do **NodeJS** vamos utilizar.
+
+#### step 3 - Prepare Cache
+
+Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que instalarmos, o processo será mais rápido pois não vai baixar denovo.
+
+```yaml
+- name: Prepare cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+```
+#### step 4 - Install Dependencies
+
+Com tudo preparado, vamos instalar as dependências do nosso projeto.\
+Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele é similar ao anterior, mas é recomendado para processo automatizados, mais [infos](https://docs.npmjs.com/cli/ci.html).
+
+```yaml
+- name: Install dependencies
+        run: npm ci
+```
+
+#### step 5 - Run tests
+
+Após instalar todas as dependências, vamos rodar nossos testes.
+
+```yaml
+- name: Run tests
+        run: npm run test:ci
+```
+Neste passo, nós rodamos o comando `npm run test:ci` pois configuramos ele para gerar relatórios de cobertura do nosso código.\
+Ele foi criando em nosso `package.json`.
+
+```shell
+jest --ci
+```
+
+
+
