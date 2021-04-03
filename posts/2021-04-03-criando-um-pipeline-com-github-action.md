@@ -41,7 +41,7 @@ Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arqu
 
 ## Explicando o arquivo em partes
 
-O arquivo completo pode ser visto clicando [aqui](https://github.com/lucasmarques73/node-api-heroku/blob/main/.github/workflows/tests.yml). * *Ele pode ter sofrido alterações durante novos posts.*
+O arquivo completo pode ser visto clicando [aqui](https://github.com/lucasmarques73/node-api-heroku/blob/main/.github/workflows/tests.yml). Ele pode ter sofrido alterações durante novos posts.
 
 ### name
 
