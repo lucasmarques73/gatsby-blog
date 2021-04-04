@@ -19,7 +19,7 @@ Após isso, vamos criar um pipeline do zero utilizando Github Action. A ideia é
 
 Segundo um artigo postado pela [Red Hat](https://www.redhat.com/pt-br/topics/devops/what-cicd-pipeline), "Um pipeline de CI/CD consiste em uma série de etapas a serem realizadas para a disponibilização de uma nova versão de um software."  
 
-O pipeline nada mais é que um arquivo onde declaramos essas etapas.A ferramenta que em nosso caso é o Github Actions, vai ler e executar cada passo. Os principais passos desse arquivo são:
+O pipeline nada mais é que um arquivo onde declaramos essas etapas. A ferramenta, que em nosso caso é o Github Actions, vai ler e executar cada passo. Os principais passos desse arquivo são:
 
 * **Preparação do ambiente**: em nosso caso, definimos a versão do Node que vai ser executada, instalamos as dependências e etc.
 * **Testes**: após o ambiente preparado, nós vamos executar nossos testes. Eles podem ser vários e geralmente executados em paralelo.
