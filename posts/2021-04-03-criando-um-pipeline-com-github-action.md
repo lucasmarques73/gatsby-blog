@@ -137,7 +137,7 @@ Após instalar todas as dependências, vamos rodar nossos testes.
 ```
 
 Neste passo, nós rodamos o comando `npm run test:ci`, ele vai rodar os testes entendendo que está em um ambiente de **CI** e caso algum teste falhe, ele aborta a etapa.\
-Ele foi criando em nosso `package.json`.
+O comando foi criado em nosso `package.json`.
 
 ```shell
 jest --ci
