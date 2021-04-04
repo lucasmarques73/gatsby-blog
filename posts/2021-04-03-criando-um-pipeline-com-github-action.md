@@ -25,9 +25,9 @@ O pipeline nada mais é que um arquivo onde declaramos essas etapas. A ferrament
 * **Testes**: após o ambiente preparado, nós vamos executar nossos testes. Eles podem ser vários e geralmente executados em paralelo.
 * **Implantação**: com nosso código validado, subimos ele para nosso ambiente. Ele pode ser um ambiente de validação, caso dependa de alguma aprovação de negócio, ou de produção, quando tudo já está validado.  
 
-## Por que é importante?
+## Por que ele é importante?
 
-Após entendermos o quê é um pipeline, temos que endenter o porquê ele é tão importante. Nele descrevemos cada etapa necessária para colocar o código em produção, essas etapas, são geralmente executadas manualmente e podem haver falhas, como por exemplo não rodar um tipo de teste. Essas falhas podem nos gerar problemas no futuro.  
+Após entendermos o que é um pipeline, temos que endenter o porquê dele ser tão importante. Nele descrevemos cada etapa necessária para colocar o código em produção, essas etapas, são geralmente executadas manualmente e podem haver falhas, como por exemplo não rodar um tipo de teste. Essas falhas podem nos gerar problemas no futuro.  
 
 Com nosso arquivo contendo cada etapa, ele vai executar todas e caso alguma falhe, ele aborta e não coloca o código em produção.
 
