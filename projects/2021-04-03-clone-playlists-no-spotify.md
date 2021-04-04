@@ -8,7 +8,7 @@ image: /assets/img/clone-spotify-playlists.png
 ---
 Projeto feito para estudar um pouco sobre [React](https://pt-br.reactjs.org) e [NextJS](https://nextjs.org) consumindo a API do Spotify para buscar e criar novas playlists.  
 
-[Projeto](https://clone-spotify-playlists.vercel.app)
+[Projeto](https://clone-spotify-playlists.vercel.app)  
 [Github](https://github.com/lucasmarques73/clone-spotify-playlists)
 
 ## Tecnologias
