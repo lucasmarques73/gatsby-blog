@@ -151,13 +151,13 @@ Podemos ver os passos sendo executados dentro da aba **Actions** no Github.
 
 ## Badge no readme
 
-Agora que temos um pipeline rodando automaticamente sempre que houver um **push** na nossa branch principal, podemos adicionar uma **badge** em nosso readme. A ideia é ele exibir uma imagem dizendo como está nosso pipeline sem a necessidade de acessarmos o Github Actions, é bastante útil em projetos Opensource onde o pipeline é rodado em lugares que não temos acesso.\
+Agora que temos um pipeline rodando automaticamente sempre que houver um **push** na nossa branch principal, podemos adicionar uma **badge** em nosso readme. A ideia é ele exibir uma imagem dizendo como está nosso pipeline sem a necessidade de acessarmos o Github Actions, é bastante útil em projetos de código aberto onde o pipeline é rodado em lugares que não temos acesso.\
 Para adicionarmos ela no readme, basta adicionarmos esse código nele.
 
 ```markdown
 ![Pipeline](https://github.com/lucasmarques73/node-api-heroku/workflows/Pipeline/badge.svg)
 ```
-
+Lembrando que a url deve corresponder ao seu repositório.  
 E o resultado será algo parecido com isso:
 
 ![Badge do GithubActions verde porque o pipeline está passando.](/assets/img/pipeline-badge.png "Badge do GithubActions verde porque o pipeline está passando.")
