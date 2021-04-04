@@ -27,15 +27,15 @@ O pipeline nada mais é que um arquivo onde declaramos essas etapas. A ferrament
 
 ## Por que ele é importante?
 
-Após entendermos o que é um pipeline, temos que endenter o porquê dele ser tão importante. Nele descrevemos cada etapa necessária para colocar o código em produção, essas etapas, são geralmente executadas manualmente e podem haver falhas, como por exemplo não rodar um tipo de teste. Essas falhas podem nos gerar problemas no futuro.  
+Após entendermos o que é um pipeline, temos que endenter o porquê dele ser tão importante. Nele descrevemos cada etapa necessária para colocar o código em produção, essas etapas, são geralmente executadas manualmente e podem haver falhas, como por exemplo, não rodar um tipo de teste. Essas falhas podem nos gerar problemas no futuro.  
 
 Com nosso arquivo contendo cada etapa, ele vai executar todas e caso alguma falhe, ele aborta e não coloca o código em produção.
 
 ## Github Actions
 
-Ele nada mais é que uma das ferramentas que podemos utilizar para colocar nosso pipeline em ação. Essas ferramentas variam de projetos e empresas. A principal diferença entre elas é como o arquivo é criado, o conceito por trás do pipeline e da cultura DevOps utilizando CI/CD é a mesma. O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline vai executar.
+Ele nada mais é que uma das ferramentas que podemos utilizar para colocar nosso pipeline em ação. Essas ferramentas variam de projetos e empresas. A principal diferença entre elas é como o arquivo é criado, o conceito por trás do pipeline e da cultura DevOps utilizando CI/CD é a mesma. O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline do Github Actions vai executar.
 
-O arquivo deve estar dentro de uma estrutura específica para que o github saiba ler este arquivo.
+O arquivo deve estar dentro de uma estrutura específica para que o github saiba ler ele.
 
 Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
 
