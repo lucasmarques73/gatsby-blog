@@ -90,7 +90,7 @@ A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já 
   uses: actions/checkout@v2
 ```
 
-#### step 2 - Setup NodeJS
+#### step 2 - Setup Node.js
 
 No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
 
@@ -103,7 +103,7 @@ No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
 
 Também temos uma **action** pra isso, e também definimos qual a versão do **NodeJS** vamos utilizar.
 
-#### step 3 - Prepare Cache
+#### step 3 - Prepare cache
 
 Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que for instalar, o processo será mais rápido pois não vai baixar novovamente.
 
@@ -117,7 +117,7 @@ Este passo é uma boa prática quando criamos esteiras de integreção contínua
             ${{ runner.os }}-node-
 ```
 
-#### step 4 - Install Dependencies
+#### step 4 - Install dependencies
 
 Com tudo preparado, vamos instalar as dependências do nosso projeto.\
 Um ponto interessante, não utilizamos `npm install`, utilizamos `npm ci`. Ele é similar ao anterior, mas é recomendado para processo automatizados, mais [infos](https://docs.npmjs.com/cli/ci.html).
