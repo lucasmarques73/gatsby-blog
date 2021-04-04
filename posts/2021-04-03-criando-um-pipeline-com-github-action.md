@@ -1,7 +1,7 @@
 ---
 type: post
 title: Criando um pipeline com Github Action
-description: Neste post vamos mostrar o qué um pipeline e aprender a criar um
+description: Neste post vamos mostrar o que é um pipeline e aprender a criar um
   usando GithubActions.
 date: 2021-04-03T05:31:51.000Z
 image: /assets/img/github-actions-job-steps.png
@@ -12,7 +12,7 @@ tags:
   - pipeline
   - devops
 ---
-Antes de mais nada, devemos saber o qué um pipeline quando falamos de software e porque ele é importante.\
+Antes de mais nada, devemos saber o que é um pipeline quando falamos de software e porque ele é importante.\
 Após isso, vamos criar um pipeline do zero utilizando Github Actions, a ideia é usar esse pipeline para rodar nossos testes e colocar nosso código em produção.
 
 ## O quê é um pipeline?
