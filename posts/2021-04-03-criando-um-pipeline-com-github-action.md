@@ -78,8 +78,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-   # Vamos descrever cada passo de forma de
-talhada.
+   # Vamos descrever cada passo de forma detalhada.
 ```
 
 #### step 1 - Checkout
@@ -106,7 +105,7 @@ Também temos uma **action** pra isso, e também definimos qual a versão do **N
 
 #### step 3 - Prepare Cache
 
-Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que instalarmos, o processo será mais rápido pois não vai baixar denovo.
+Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que for instalar, o processo será mais rápido pois não vai baixar novovamente.
 
 ```yaml
 - name: Prepare cache
@@ -137,7 +136,7 @@ Após instalar todas as dependências, vamos rodar nossos testes.
         run: npm run test:ci
 ```
 
-Neste passo, nós rodamos o comando `npm run test:ci`, ele vai rodar os testes entendo que está em um ambiente de **CI** e caso algum teste falhe, ele aborta a etapa.\
+Neste passo, nós rodamos o comando `npm run test:ci`, ele vai rodar os testes entendendo que está em um ambiente de **CI** e caso algum teste falhe, ele aborta a etapa.\
 Ele foi criando em nosso `package.json`.
 
 ```shell
