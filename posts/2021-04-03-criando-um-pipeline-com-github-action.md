@@ -15,7 +15,7 @@ tags:
 Antes de mais nada, devemos saber o que é um pipeline quando falamos de software e por que ele é importante.\
 Após isso, vamos criar um pipeline do zero utilizando Github Action. A ideia é usar esse pipeline para rodar nossos testes e colocar nosso código em produção.
 
-## O quê é um pipeline?
+## O que é um pipeline?
 
 Segundo um artigo postado pela [Red Hat](https://www.redhat.com/pt-br/topics/devops/what-cicd-pipeline), "Um pipeline de CI/CD consiste em uma série de etapas a serem realizadas para a disponibilização de uma nova versão de um software."  
 
