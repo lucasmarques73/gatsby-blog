@@ -1,9 +1,9 @@
 ---
 type: post
-title: Criando um pipeline com Github Action
+title: Criando um pipeline com Github Actions
 description: Neste post vamos mostrar o que é um pipeline e aprender a criar um
-  usando GithubActions.
-date: 2021-04-05 12:58:43
+  usando Github Actions.
+date: 2021-04-05T12:58:43.000Z
 image: /assets/img/github-actions-job-steps.png
 category: devops
 tags:
@@ -13,7 +13,7 @@ tags:
   - devops
 ---
 Antes de mais nada, devemos saber o que é um pipeline quando falamos de software e por que ele é importante.\
-Após isso, vamos criar um pipeline do zero utilizando Github Action. A ideia é usar esse pipeline para rodar nossos testes e colocar nosso código em produção.
+Após isso, vamos criar um pipeline do zero utilizando Github Actions. A ideia é usar esse pipeline para rodar nossos testes e colocar nosso código em produção.
 
 ## O que é um pipeline?
 
@@ -35,7 +35,7 @@ Com nosso arquivo contendo cada etapa, ele vai executar todas e caso alguma falh
 
 Ele nada mais é que uma das ferramentas que podemos utilizar para colocar nosso pipeline em ação. Essas ferramentas variam de projetos e empresas. A principal diferença entre elas é como o arquivo é criado, o conceito por trás do pipeline e da cultura DevOps utilizando CI/CD é a mesma. O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline do Github Actions vai executar.
 
-O arquivo deve estar dentro de uma estrutura específica para que o github saiba ler ele.
+O arquivo deve estar dentro de uma estrutura específica para que o Github saiba ler ele.
 
 Vamos então seguir a seguinte estrutura **.github/workflows/tests.yml**. O arquivo **tests.yml** é nosso pipeline que vai executar nossos testes.
 
@@ -160,7 +160,7 @@ Para adicionarmos ela no readme, basta adicionarmos esse código nele.
 Lembrando que a url deve corresponder ao seu repositório.  
 E o resultado será algo parecido com isso:
 
-![Badge do GithubActions verde porque o pipeline está passando.](/assets/img/pipeline-badge.png "Badge do GithubActions verde porque o pipeline está passando.")
+![Badge do Github Actions verde porque o pipeline está passando.](/assets/img/pipeline-badge.png "Badge do Github Actions verde porque o pipeline está passando.")
 
 Bom, com isso temos nosso pipeline rodando e uma badge para acompanharmos o status do pipeline.   
 
