@@ -162,7 +162,7 @@ E o resultado será algo parecido com isso:
 
 ![Badge do Github Actions verde porque o pipeline está passando.](/assets/img/pipeline-badge.png "Badge do Github Actions verde porque o pipeline está passando.")
 
-Bom, com isso temos nosso pipeline rodando e uma badge para acompanharmos o status do pipeline.   
+Bom, com isso temos nosso pipeline rodando e uma **badge** para acompanharmos o status do pipeline.   
 
 Nos próximos posts, quero trazer um pouco mais de segurança para nosso repositório, protegendo nossa branch principal de commits diretos, entre outras coisas.
 
