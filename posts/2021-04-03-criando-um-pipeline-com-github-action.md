@@ -22,9 +22,9 @@ Segundo um artigo postado pela [Red Hat](https://www.redhat.com/pt-br/topics/dev
 O pipeline nada mais é que um arquivo onde declaramos essas etapas. Existem diversas ferramentas para criarmos e executarmos esses pipelines, por exemplo: [Jenkins](https://www.jenkins.io), [TravisCI](https://travis-ci.org), [Azure Pipelines](https://azure.microsoft.com/pt-br/services/devops/pipelines/), entre outos.  
 Em nosso caso o Github Actions, vai ler e executar cada passo. Os principais passos desse arquivo são:
 
-* **Preparação do ambiente**: em nosso caso, definimos a versão do Node que vai ser executada, instalamos as dependências e etc.
+* **Preparação do ambiente**: onde instalamos as dependências e pacotes necessários para o projeto.
 * **Testes**: após o ambiente preparado, nós vamos executar nossos testes. Eles podem ser vários e geralmente executados em paralelo.
-* **Implantação**: com nosso código validado, subimos ele para nosso ambiente. Ele pode ser um ambiente de validação, caso dependa de alguma aprovação de negócio, ou de produção, quando tudo já está validado.  
+* **Implantação**: com nossos testes passando, subimos ele para nosso ambiente. Ele pode ser um ambiente de validação, caso dependa de alguma aprovação de negócio, ou de produção, quando tudo já está validado.  
 
 ## Por que ele é importante?
 
