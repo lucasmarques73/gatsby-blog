@@ -34,7 +34,7 @@ Com nosso arquivo contendo cada etapa, ele vai executar todas e caso alguma falh
 
 ## Github Actions
 
-Ele nada mais é que uma das ferramentas que podemos utilizar para colocar nosso pipeline em ação. Essas ferramentas variam de projetos e empresas. A principal diferença entre elas é como o arquivo é criado, o conceito por trás do pipeline e da cultura DevOps utilizando CI/CD é a mesma. O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline do Github Actions vai executar.
+Como dito anteriormente, ele nada mais é que uma das ferramentas que podemos utilizar para colocar nosso pipeline em ação. A principal diferença entre elas é como o arquivo é criado, o conceito por trás do pipeline e da cultura DevOps utilizando CI/CD é a mesma. O primeiro passo é criar no projeto um arquivo de configuração. Este arquivo vai descrever os passos que nosso pipeline do Github Actions vai executar.
 
 O arquivo deve estar dentro de uma estrutura específica para que o Github saiba ler ele.
 
