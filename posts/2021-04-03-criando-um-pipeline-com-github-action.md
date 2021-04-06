@@ -84,7 +84,7 @@ jobs:
 
 #### step 1 - Checkout
 
-A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já temos uma **action** do próprio **Github** que faz isso.
+A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já temos uma **action** do próprio **Github**.
 
 ```yaml
 - name: Checkout Repository
@@ -93,7 +93,7 @@ A primeira coisa que devemos fazer, é baixar nosso repositório. Pra isso, já 
 
 #### step 2 - Setup Node.js
 
-No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
+No próximo passo, nós configuramos o **NodeJS** para executarmos nosso projeto.
 
 ```yaml
 - name: Setup Node.js
@@ -102,7 +102,7 @@ No próximo passo nós configuramos o **NodeJS** para executarmos nosso projeto.
           node-version: "12.x"
 ```
 
-Também temos uma **action** pra isso, e também definimos qual a versão do **NodeJS** vamos utilizar.
+Também temos uma **action** pra isso, e também definimos qual a versão do **NodeJS** que vamos utilizar.
 
 #### step 3 - Prepare cache
 
