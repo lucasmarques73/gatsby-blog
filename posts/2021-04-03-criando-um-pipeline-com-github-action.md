@@ -3,7 +3,7 @@ type: post
 title: Criando um pipeline com Github Actions
 description: Neste post vamos mostrar o que é um pipeline e aprender a criar um
   usando Github Actions.
-date: 2021-04-06 05:33:05
+date: 2021-04-06T05:33:05.000Z
 image: /assets/img/github-actions-job-steps.png
 category: devops
 tags:
@@ -106,7 +106,7 @@ Também temos uma **action** pra isso, e também definimos qual a versão do **N
 
 #### step 3 - Prepare cache
 
-Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que for instalar, o processo será mais rápido pois não vai baixar novovamente.
+Este passo é uma boa prática quando criamos esteiras de integreção contínua. Nele vamos configurar para fazer **cache** dos pacotes que são dependências do projeto. Assim, sempre que for instalar, o processo será mais rápido pois não vai baixar novamente.
 
 ```yaml
 - name: Prepare cache
