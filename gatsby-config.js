@@ -47,7 +47,7 @@ const pluginsConfig = [
     options: {
       plugins: [
         {
-          resolve: "gatsby-remark-relative-images",
+          resolve: "gatsby-remark-relative-images-v2",
           options: {
             name: "uploads",
           },
@@ -55,7 +55,7 @@ const pluginsConfig = [
         {
           resolve: "gatsby-remark-images",
           options: {
-            maxWitdh: 960,
+            maxWidth: 960,
             linkImagesToOriginal: false,
           },
         },
@@ -64,6 +64,7 @@ const pluginsConfig = [
       ],
     },
   },
+  `gatsby-plugin-image`,
   `gatsby-transformer-sharp`,
   `gatsby-plugin-sharp`,
   {
@@ -119,7 +120,6 @@ module.exports = {
     authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
     siteUrl: "https://lucasmarques.dev",
     disqusShortName: "lucas-marques-dev",
-
     postsConfig: {
       postsPerPage: 6,
       postsBasePath: "/",
@@ -154,4 +154,8 @@ module.exports = {
     ],
   },
   plugins: pluginsConfig,
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true
+  }
 }

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
 import media from "styled-media-query"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -9,15 +8,16 @@ export const ProjectGridWrapper = styled.section`
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 `
 
-export const ImageWrapper = styled(Img)`
-  border-radius: 50%;
-  display: flex;
-  min-width: 120px;
-  min-height: 120px;
-
-  ${media.lessThan("large")`
+export const ImageWrapper = styled.div`
+  .gatsby-image-wrapper {
+    border-radius: 50%;
+    display: flex;
+    max-width: 120px;
+    max-height: 120px;
+    ${media.lessThan('large')`
     margin-bottom: 5px;
   `}
+  }
 `
 
 export const ProjectItemWrapper = styled.section`
