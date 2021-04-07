@@ -23,7 +23,7 @@ Eu gostei muito da ideia e aderi aos meus projetos. Neste post vou demonstrar co
 
 Para isso, eu resolvi mover a branch **master** para a nova branch que vamos chamar de **main**, como sugeriu [@Una](https://twitter.com/Una).
 
-```shel
+```shell
 git branch -m master main
 ```
 
@@ -55,7 +55,7 @@ Agora com a listagem de todas as branchs do projeto, é só clicar na lixeira pa
 
 ![Excluindo branch antiga.](/assets/img/selected-trash-to-branch.png "Excluindo branch antiga.")
 
-Com isso, finalizamos nossa alteração de branch principal em nosso repositório no github. E deixamos de ter uma referência ao trabalho escravo em nosso projeto.  
+Com isso, finalizamos nossa alteração de branch principal em nosso repositório no github. E deixamos de ter uma referência ao trabalho escravo em nosso projeto.
 
 Deixo aqui um [Link](https://revistaglamour.globo.com/Lifestyle/noticia/2019/04/17-palavras-e-expressoes-racistas-que-ninguem-deveria-usar-mais.html) com algumas palavras e expressões que nós deveríamos pensar melhor antes de utilizá-las, pois são relacionadas ao racismo.
 
