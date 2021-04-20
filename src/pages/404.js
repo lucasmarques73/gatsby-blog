@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 import * as S from "../components/Post/styled"
 
@@ -12,7 +12,7 @@ const NotFoundPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={page.title} image={page.image} />
+      <Seo title={page.title} image={page.image} />
       <S.PostHeader>
         <S.PostTitle>{page.title}</S.PostTitle>
       </S.PostHeader>

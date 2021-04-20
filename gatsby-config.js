@@ -117,7 +117,7 @@ module.exports = {
     position: `Desenvolvedor Web`,
     description: `Blog para anotações sobre qualquer coisa que eu estiver estudando.`,
     author: `@lucas_marques`,
-    authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Php | Go | Tests | DevOps`,
+    authorDescription: `Desenvolvedor Web | Node.js | React | Redux | Tests | DevOps`,
     siteUrl: "https://lucasmarques.dev",
     disqusShortName: "lucas-marques-dev",
     postsConfig: {
@@ -134,7 +134,7 @@ module.exports = {
         url: "/projects",
       },
       {
-        label: "Sobre Mim",
+        label: "Sobre",
         url: "/about",
       },
     ],

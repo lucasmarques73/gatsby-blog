@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 import ProjectItem from "../components/Projects/ProjectItem"
 import * as S from "../components/Projects/styled"
 
@@ -11,7 +11,7 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Projetos" />
+      <Seo title="Projetos" />
       <S.ProjectGridWrapper>
         {projectsList.map(
           (

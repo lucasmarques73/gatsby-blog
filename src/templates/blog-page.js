@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 
 import * as S from "../components/Post/styled"
 
@@ -12,7 +12,7 @@ const BlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={page.title}
         description={page.description}
         image={page.image}
