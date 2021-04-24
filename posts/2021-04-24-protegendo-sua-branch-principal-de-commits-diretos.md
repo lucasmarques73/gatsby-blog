@@ -25,3 +25,7 @@ Primeiro passo é garantir que você tenha acesso para fazer isso no Github. Bas
 
 ![Configurações de Branches dentro do Github](/assets/img/settigns-branches.png "Configurações de Branches dentro do Github")
 
+Após isso, temos a opção **Branch protection rules** onde configuramos nossas regras de proteção de branch como o próprio nome já diz. Nós vamos adicionar uma nova regra.
+
+![Regras de proteção de branch, com botão para adicionar novas regras destacado.](/assets/img/add-rule.png "Regras de proteção de branch, com botão para adicionar novas regras destacado.")
+
