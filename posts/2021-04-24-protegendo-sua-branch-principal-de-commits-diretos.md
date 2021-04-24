@@ -15,8 +15,13 @@ Continuando nossas alterações feitos neste [repositório](https://github.com/l
 
 ## Por que isso é tão importante?
 
-No meu ponto de vista, isso é importante pelo motivo de eu considerar a branch principal um local onde deve sempre estar o código de produção. Não devemos inserir códigos incompletos, ou sem testes, etc.  
-Não que isso possa ser inserido através de um PR, mas com um PR, temos uma revisão do código, para ajudar a impedir esse tipo de situação.  
+No meu ponto de vista, isso é importante pelo motivo de eu considerar a branch principal um local onde deve sempre estar o código de produção. Não devemos inserir códigos incompletos, ou sem testes, etc.\
+Não que isso possa ser inserido através de um PR, mas com um PR, temos uma revisão do código, para ajudar a impedir esse tipo de situação.\
 Eu mesmo não faço isso em todos os meus projetos, mas sempre que estou alterando algo grande, eu abro um PR e reviso. **Devemos sempre evitar possíveis bugs em nosso código**.
 
 ## Como fazer isso no Github?
+
+Primeiro passo é garantir que você tenha acesso para fazer isso no Github. Basta irmos em **Settings → Branches** como na imagem abaixo.
+
+![Configurações de Branches dentro do Github](/assets/img/settigns-branches.png "Configurações de Branches dentro do Github")
+
