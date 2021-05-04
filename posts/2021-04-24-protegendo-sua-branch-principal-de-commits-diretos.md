@@ -32,3 +32,5 @@ Após isso, temos a opção **Branch protection rules** onde configuramos nossas
 O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter regras específicas para **branchs** específicas, e podemos utilizar **regex**, por exemplo, `hotfix/*` aplicaria a regra para todas as **branchs** que começam com `hotfix/`
 
 ![Input para inserir o nome ou padrão da branch](/assets/img/branch-name-pattern.png "Input para inserir o nome ou padrão da branch")
+
+Agora com a **branch** definida, vamos começar a escolher as regras.
