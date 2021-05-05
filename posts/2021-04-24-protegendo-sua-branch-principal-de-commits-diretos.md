@@ -29,11 +29,11 @@ Após isso, temos a opção **Branch protection rules** onde configuramos nossas
 
 ![Regras de proteção de branch, com botão para adicionar novas regras destacado.](/assets/img/add-rule.png "Regras de proteção de branch, com botão para adicionar novas regras destacado.")
 
-O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter regras específicas para **branchs** específicas, e podemos utilizar **regex**, por exemplo, `hotfix/*` aplicaria a regra para todas as **branchs** que começam com `hotfix/`
+O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter regras específicas para branchs específicas, e podemos utilizar **regex**, por exemplo, `hotfix/*` aplicaria a regra para todas as branchs que começam com `hotfix/`
 
 ![Input para inserir o nome ou padrão da branch](/assets/img/branch-name-pattern.png "Input para inserir o nome ou padrão da branch")
 
-Agora com a **branch** definida, vamos começar a escolher as regras.
+Agora com a branch definida, vamos começar a escolher as regras.
 
 ![Lista de regras disponíveis para aplicarmos em uma branch](/assets/img/rules-activated.png "Lista de regras disponíveis para aplicarmos em uma branch")
 
@@ -51,14 +51,12 @@ Agora com a **branch** definida, vamos começar a escolher as regras.
 
   > Esta regra é extremamente importante quando se fala da proteção, com ela forçamos aos administradores do repositório a segui-lás. Caso contrário, ele poderia escapar de todas elas.
 
-Após isso devemos salvar nossas alterações, e agora não podemos ter novos **commits** diretos em nossa **branch** principal.
+Após isso devemos salvar nossas alterações, e agora não podemos ter novos commits diretos em nossa branch principal.
 
-Enquanto estivermos em nosso computador ainda vamos conseguir fazer os **commits** na **branch**, mas ao tentar subir o código teremos um erro devido à proteção.
-
-
+Enquanto estivermos em nosso computador ainda vamos conseguir fazer os commits na branch, mas ao tentar subir o código teremos um erro devido à proteção.
 
 ![Comandos do git sendo executados no terminal](/assets/img/git-commands.png "Comandos do git sendo executados no terminal")
 
-Finalizando, assim acabamos de proteger nossa **branch**, garantindo um processo de **Code Review** mais forte dentro do nosso projeto.
+Finalizando, assim acabamos de proteger nossa branch, garantindo um processo de **Code Review** mais forte dentro do nosso projeto.
 
 Obrigado por terem lido até aqui. Até a próxima.
