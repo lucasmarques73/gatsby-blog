@@ -38,11 +38,27 @@ Agora com a **branch** definida, vamos começar a escolher as regras.
 ![Lista de regras disponíveis para aplicarmos em uma branch](/assets/img/rules-activated.png "Lista de regras disponíveis para aplicarmos em uma branch")
 
 * **Require pull request reviews before merging**
-> Com essa regra, todo código deverá passar por um PR antes de ser feito **merge**.  
-Esperamos que pelo menos uma pessoa revise.
+
+  > Com essa regra, todo código deverá passar por um PR antes de ser feito **merge**.\
+  > Esperamos que pelo menos uma pessoa revise.
 * **Dismiss stale pull request approvals when new commits are pushed**
-> Essa regra serve para quando é feito **push** com novos **commits** as aprovações anteriores sejam descartadas precisando de novas.
+
+  > Essa regra serve para quando é feito **push** com novos **commits** as aprovações anteriores sejam descartadas precisando de novas.
 * **Require linear history**
-> Este não é uma regra para bloquear os **commits**, ela serve para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
+
+  > Este não é uma regra para bloquear os **commits**, ela serve para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
 * **Include administrators**
-> Esta regra é extremamente importante quando se fala da proteção, com ela forçamos aos administradores do repositório a segui-lás. Caso contrário, ele poderia escapar de todas elas.
+
+  > Esta regra é extremamente importante quando se fala da proteção, com ela forçamos aos administradores do repositório a segui-lás. Caso contrário, ele poderia escapar de todas elas.
+
+Após isso devemos salvar nossas alterações, e agora não podemos ter novos **commits** diretos em nossa **branch** principal.
+
+Enquanto estivermos em nosso computador ainda vamos conseguir fazer os **commits** na **branch**, mas ao tentar subir o código teremos um erro devido à proteção.
+
+
+
+![Comandos do git sendo executados no terminal](/assets/img/git-commands.png "Comandos do git sendo executados no terminal")
+
+Finalizando, assim acabamos de proteger nossa **branch**, garantindo um processo de **Code Review** mais forte dentro do nosso projeto.
+
+Obrigado por terem lido até aqui. Até a próxima.
