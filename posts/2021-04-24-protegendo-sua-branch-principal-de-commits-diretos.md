@@ -34,3 +34,15 @@ O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter
 ![Input para inserir o nome ou padrão da branch](/assets/img/branch-name-pattern.png "Input para inserir o nome ou padrão da branch")
 
 Agora com a **branch** definida, vamos começar a escolher as regras.
+
+![Lista de regras disponíveis para aplicarmos em uma branch](/assets/img/rules-activated.png "Lista de regras disponíveis para aplicarmos em uma branch")
+
+* **Require pull request reviews before merging**
+> Com essa regra, todo código deverá passar por um PR antes de ser feito **merge**.  
+Esperamos que pelo menos uma pessoa revise.
+* **Dismiss stale pull request approvals when new commits are pushed**
+> Essa regra serve para quando é feito **push** com novos **commits** as aprovações anteriores sejam descartadas precisando de novas.
+* **Require linear history**
+> Este não é uma regra para bloquear os **commits**, ela serve para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
+* **Include administrators**
+> Esta regra é extremamente importante quando se fala da proteção, com ela forçamos aos administradores do repositório a segui-lás. Caso contrário, ele poderia escapar de todas elas.
