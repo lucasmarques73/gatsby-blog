@@ -48,7 +48,7 @@ Agora com a branch definida, vamos começar a escolher as regras.
   > Esperamos que pelo menos uma pessoa revise.
 * **Dismiss stale pull request approvals when new commits are pushed**
 
-  > Essa regra serve para quando feito **push** com novos **commits**, as aprovações anteriores sejam descartadas precisando de novas.
+  > Essa regra faz com que as aprovações anteriores sejam descartadas quando feito **push** com novos **commits**,  precisando de novas.
 * **Require linear history**
 
   > Este não é uma regra para bloquear os **commits**, ela serve para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
