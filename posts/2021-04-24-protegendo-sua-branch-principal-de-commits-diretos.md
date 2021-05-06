@@ -64,6 +64,6 @@ Enquanto estivermos em nosso computador ainda vamos conseguir fazer os commits n
 
 Bom, assim acabamos de proteger nossa branch, garantindo um processo de **Code Review** mais forte dentro do nosso projeto.
 
-No próximo post, vamos adicionar mais uma verificação na proteção da branch. Queremos que nossos testes sejam executados em cada PR e apenas com todos passando, permitir que o PR seja aceito.
+No próximo post, vamos adicionar mais uma verificação na proteção da branch. Queremos que nossos testes sejam executados em cada PR e apenas com todos os testes passando, permitir que o PR seja aceito.
 
 Obrigado por terem lido até aqui. Até a próxima.
