@@ -24,7 +24,7 @@ Eu mesmo não faço isso em todos os meus projetos, mas sempre que estou alteran
 
 ## Como fazer isso no Github?
 
-Primeiro passo é garantir que você tenha acesso para criar regras de proteção de branchs no Github. Basta irmos em **Settings → Branches** como na imagem abaixo.
+Primeiro passo é garantir que você tenha acesso para criar regras de proteção de branches no Github. Basta irmos em **Settings → Branches** como na imagem abaixo.
 
 ![Configurações de Branches dentro do Github](/assets/img/settigns-branches.png "Configurações de Branches dentro do Github")
 
@@ -34,7 +34,7 @@ Nós vamos adicionar uma nova regra.
 
 ![Regras de proteção de branch, com botão para adicionar novas regras destacado.](/assets/img/add-rule.png "Regras de proteção de branch, com botão para adicionar novas regras destacado.")
 
-O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter regras específicas para branchs específicas, e podemos utilizar **regex**, por exemplo, `hotfix/*` aplicaria a regra para todas as branchs que começam com `hotfix/`
+O primeiro passo é escolher para qual branch vamos aplicar a regra. Podemos ter regras específicas para branches específicas, e podemos utilizar **regex**, por exemplo, `hotfix/*` aplicaria a regra para todas as branches que começam com `hotfix/`
 
 ![Input para inserir o nome ou padrão da branch](/assets/img/branch-name-pattern.png "Input para inserir o nome ou padrão da branch")
 
