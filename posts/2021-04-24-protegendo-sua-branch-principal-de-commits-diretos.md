@@ -24,7 +24,7 @@ Eu mesmo não faço isso em todos os meus projetos, mas sempre que estou alteran
 
 ## Como fazer isso no Github?
 
-Primeiro passo é garantir que você tenha acesso para fazer isso no Github. Basta irmos em **Settings → Branches** como na imagem abaixo.
+Primeiro passo é garantir que você tenha acesso para criar regras de proteção de branchs no Github. Basta irmos em **Settings → Branches** como na imagem abaixo.
 
 ![Configurações de Branches dentro do Github](/assets/img/settigns-branches.png "Configurações de Branches dentro do Github")
 
