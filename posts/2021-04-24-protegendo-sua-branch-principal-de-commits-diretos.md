@@ -54,9 +54,9 @@ Agora com a branch definida, vamos começar a escolher as regras.
   > Essa não é uma regra para bloquear os **commits**, ela útil para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
 * **Include administrators**
 
-  > Essa regra é extremamente importante quando se fala da proteção, com ela forçamos os administradores do repositório a seguir as regras mencionadas anteriormente. Caso contrário, eles poderiam escapar de todas elas.
+  > Essa regra é extremamente importante quando se fala da proteção, com ela forçamos os administradores do repositório a seguir as regras mencionadas anteriormente. Caso contrário, eles(administradores) poderiam escapar de todas elas.
 
-Após isso devemos salvar nossas alterações, e agora não podemos ter novos commits diretos em nossa branch principal.
+Após isso, devemos salvar nossas alterações, e agora não podemos ter novos commits diretos em nossa branch principal.
 
 Enquanto estivermos em nosso computador ainda vamos conseguir fazer os commits na branch, mas ao tentar subir o código teremos um erro devido à proteção.
 
