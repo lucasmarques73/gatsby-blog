@@ -51,10 +51,10 @@ Agora com a branch definida, vamos começar a escolher as regras.
   > Essa regra faz com que as aprovações anteriores sejam descartadas quando feito **push** com novos **commits**,  precisando de novas aprovações.
 * **Require linear history**
 
-  > Essa não é uma regra para bloquear os **commits**, ela serve para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
+  > Essa não é uma regra para bloquear os **commits**, ela útil para termos um histórico de **commits** linear, ou seja, ao invés de fazer **merge** ele irá fazer **rebase**.
 * **Include administrators**
 
-  > Essa regra é extremamente importante quando se fala da proteção, com ela forçamos aos administradores do repositório a segui-lás. Caso contrário, ele poderia escapar de todas elas.
+  > Essa regra é extremamente importante quando se fala da proteção, com ela forçamos os administradores do repositório a seguir as regras mencionadas anteriormente. Caso contrário, eles poderiam escapar de todas elas.
 
 Após isso devemos salvar nossas alterações, e agora não podemos ter novos commits diretos em nossa branch principal.
 
