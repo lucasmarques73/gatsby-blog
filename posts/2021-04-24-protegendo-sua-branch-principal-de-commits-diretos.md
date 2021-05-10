@@ -5,6 +5,7 @@ description: A ideia com esse post é fazer com que todos os commits sejam
   enviados para branch principal através de PRs, dado que agora sempre rodamos
   os testes nele.
 date: 2021-04-23 09:00:10
+image: /assets/img/git-commands.png
 category: devops
 tags:
   - branch
